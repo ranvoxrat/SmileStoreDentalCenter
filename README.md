@@ -13,3 +13,4 @@ click the link to view live preview ➡
 
 ## 📷 Screenshots
 ![Dentalist Desktop](https://raw.githubusercontent.com/2AWebDeveloper/dentalist/main/assets/images/screenshot-desktop.png)
+# SmileStoreDentalCenter
