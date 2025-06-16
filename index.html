@@ -203,27 +203,34 @@
     <main id="main">
         <!-- Top Main Section -->
         <section class="mb-12 lg:mb-16 xl:mb-24">
-            <div class="container">
-                <div class="bg-top-main pt-8 px-8 lg:pt-0 rounded-3xl lg:min-h-[500px] xl:min-h-[620px] 2xl:min-h-[760px] gap-y-14 flex flex-col lg:flex-row justify-between items-center bg-[#DBEFFA]">
-                    <div class="lg:w-1/2 text-center items-center lg:items-start lg:text-start flex flex-col gap-y-6 lg:gap-y-8">
-                        <h1 class="curved-font2">
-                        Welcome <span class="curved-font1">To</span>
-                        </h1>
-                        <h1 class="curved-font">
-                           Smile Restore Dental Center
-                        </h1>
-                        <p class="text-slate-800/70 font-medium text-base lg:text-lg w-[90%]">Put your best smile forward with Smile Restore Dental Center. We offer complete dental care for kids and adults, with personalized treatments from our experienced team.</p>
-                       <!-- <a onclick="openBookingModal()" class="h-12 w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800 cursor-pointer">Book an Appointment</a> -->
-                    <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"  class="h-12 w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800 cursor-pointer" type="button">
-                    Book an Appointment
-                    </button>
-                    </div>
-                    <div class="lg:w-1/2 mt-auto">
-                        <img class="" src="./assets/images/prof1.png" alt="">
-                    </div>
-                </div>
+    <div class="container">
+        <div class="bg-top-main pt-8 px-8 lg:pt-0 rounded-3xl lg:min-h-[500px] xl:min-h-[620px] 2xl:min-h-[760px] gap-y-14 flex flex-col lg:flex-row justify-between items-center bg-[#DBEFFA]">
+            
+            <!-- IMAGE FIRST ON MOBILE, LAST ON DESKTOP -->
+            <div class="w-full lg:w-1/2 order-first lg:order-last mb-6 lg:mb-0">
+                <img src="./assets/images/prof1.png" alt="" class="mx-auto w-full max-w-[400px] lg:max-w-full">
             </div>
-        </section>
+
+            <!-- TEXT CONTENT SECOND ON MOBILE, FIRST ON DESKTOP -->
+            <div class="w-full lg:w-1/2 text-center lg:text-start flex flex-col gap-y-6 lg:gap-y-8 mb-12">
+                <h1 class="curved-font2">
+                    Welcome <span class="curved-font1">To</span>
+                </h1>
+                <h1 class="curved-font">
+                    Smile Restore Dental Center
+                </h1>
+                <p class="text-slate-800/70 font-medium text-base lg:text-lg w-[90%] mx-auto lg:mx-0">
+                    Put your best smile forward with Smile Restore Dental Center. We offer complete dental care for kids and adults, with personalized treatments from our experienced team.
+                </p>
+                <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" type="button"
+                    class="h-12 w-44 bg-primary text-white text-sm font-bold rounded-xl transition-colors hover:bg-indigo-800 mx-auto lg:mx-0">
+                    Book an Appointment
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
  <!-- Main modal -->
 <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-1/2 max-h-full">
@@ -283,18 +290,18 @@
                             <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
                         </div>
                     </div>
-                   <div class="grid gap-4 mb-4 grid-cols-2">
-                        <div class="flex flex-col gap-y-2 relative">
-                            <label class="font-bold text-[13px] text-slate-600/90" for="first-name">Preferred Date</label>
-                            <input class="modal-form pl-10" id="first-name" type="date" placeholder="Enter your first name" required>
-                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
-                        </div>
-                         <div class="flex flex-col gap-y-2 relative">
-                            <label class="font-bold text-[13px] text-slate-600/90" for="first-name">Preferred Time</label>
-                            <input class="modal-form pl-10" id="first-name" type="time" placeholder="Enter your first name" required>
-                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
-                        </div>
-                    </div>
+                  <div class="grid gap-4 mb-4 grid-cols-1 sm:grid-cols-2">
+    <div class="flex flex-col gap-y-2 relative">
+        <label for="preferred-date" class="font-bold text-[13px] text-slate-600/90">Preferred Date</label>
+        <input type="date" id="preferred-date" class="modal-form pl-10" required>
+    </div>
+
+    <div class="flex flex-col gap-y-2 relative">
+        <label for="preferred-time" class="font-bold text-[13px] text-slate-600/90">Preferred Time</label>
+        <input type="time" id="preferred-time" class="modal-form pl-10" required>
+    </div>
+</div>
+
                     <div class="grid gap-4 mb-4 grid-cols-2">
                         <div class="flex flex-col gap-y-2">
                             <label class="font-bold text-[13px] text-slate-600/90" for="new-patient">Are you a new patient?</label>

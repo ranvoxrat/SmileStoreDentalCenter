@@ -438,16 +438,16 @@ video {
 html {
   scroll-behavior: smooth;
 }
-.curved-font {
-   font-family: "Poppins", sans-serif!important;
-  font-weight: 800!important;
-  font-size: 3.5rem!important;
-  font-style: normal!important;
-  line-height: 4rem!important;
-  text-transform: uppercase!important;
-  color: rgba(15, 8, 224, 0.732)!important;
-}
 
+.curved-font {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  font-style: normal;
+  line-height: 2rem;
+  text-transform: uppercase;
+  color: rgba(15, 8, 224, 0.732);
+}
 .curved-font1 {
    font-family:"Dancing Script", cursive!important;
   font-weight: 700!important;
@@ -1418,7 +1418,10 @@ body{
 .text-center {
   text-align: center;
 }
-
+.text-2xl {
+  font-size: 10px!important;
+  line-height: 1.5rem;
+}
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1667,6 +1670,15 @@ body{
   .xs\:leading-snug {
     line-height: 1.375;
   }
+  .curved-font {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 3.5rem;
+  font-style: normal;
+  line-height: 4rem;
+  text-transform: uppercase;
+  color: rgba(15, 8, 224, 0.732);
+}
 }
 
 @media (min-width: 640px) {
