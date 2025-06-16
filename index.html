@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./styles/main.css" type="text/css">
     <link rel="icon" href="./assets/images/favicon.png" type="images/png">
-  
-
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <style>
         .swiper-pagination-bullet-active {
         background-color: #583FBC !important;
@@ -213,7 +213,10 @@
                            Smile Restore Dental Center
                         </h1>
                         <p class="text-slate-800/70 font-medium text-base lg:text-lg w-[90%]">Put your best smile forward with Smile Restore Dental Center. We offer complete dental care for kids and adults, with personalized treatments from our experienced team.</p>
-                        <a class="h-12 w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800" href="#">Book an Appointment</a>
+                       <!-- <a onclick="openBookingModal()" class="h-12 w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800 cursor-pointer">Book an Appointment</a> -->
+                    <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"  class="h-12 w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800 cursor-pointer" type="button">
+                    Book an Appointment
+                    </button>
                     </div>
                     <div class="lg:w-1/2 mt-auto">
                         <img class="" src="./assets/images/prof1.png" alt="">
@@ -221,7 +224,93 @@
                 </div>
             </div>
         </section>
-        
+ <!-- Main modal -->
+<div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-1/2 max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700 p-20">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-900">
+                    Book Appointment
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <form class="p-4 md:p-5">
+                <div class="row">
+                    <div class="grid gap-4 mb-4 grid-cols-3 sm:grid-c">
+                        <div class="flex flex-col gap-y-2 relative">
+                            <label class="font-bold text-[13px] text-slate-600/90" for="first-name">First Name</label>
+                            <input class="modal-form pl-10" id="first-name" type="text" placeholder="Enter your first name" required>
+                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
+                        </div>
+
+                        <div class="flex flex-col gap-y-2 relative">
+                            <label class="font-bold text-[13px] text-slate-600/90" for="middle-name">Middle Initial</label>
+                            <input class="modal-form pl-10" id="middle-name" type="text" placeholder="Enter your middle name" required>
+                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
+                        </div>
+
+                        <div class="flex flex-col gap-y-2 relative">
+                            <label class="font-bold text-[13px] text-slate-600/90" for="last-name">Last Name</label>
+                            <input class="modal-form pl-10" id="last-name" type="text" placeholder="Enter your last name" required>
+                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
+                        </div>
+                    </div>
+                    <div class="grid gap-4 mb-4 grid-cols-2">
+                        <div class="flex flex-col gap-y-2 relative">
+                            <label class="font-bold text-[13px] text-slate-600/90" for="first-name">Email</label>
+                            <input class="modal-form pl-10" id="first-name" type="text" placeholder="Enter your first name" required>
+                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
+                        </div>
+
+                        <div class="flex flex-col gap-y-2 relative">
+                            <label class="font-bold text-[13px] text-slate-600/90" for="middle-name">Contact</label>
+                            <input class="modal-form pl-10" id="middle-name" type="text" placeholder="Enter your middle name" required>
+                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
+                        </div>
+                    </div>
+                    <div class="grid gap-4 mb-4 grid-cols-1">
+                        <div class="flex flex-col gap-y-2 relative">
+                            <label class="font-bold text-[13px] text-slate-600/90" for="first-name">Address</label>
+                            <input class="modal-form pl-10" id="first-name" type="text" placeholder="Enter your first name" required>
+                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
+                        </div>
+                    </div>
+                   <div class="grid gap-4 mb-4 grid-cols-2">
+                        <div class="flex flex-col gap-y-2 relative">
+                            <label class="font-bold text-[13px] text-slate-600/90" for="first-name">Preferred Date</label>
+                            <input class="modal-form pl-10" id="first-name" type="date" placeholder="Enter your first name" required>
+                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
+                        </div>
+                         <div class="flex flex-col gap-y-2 relative">
+                            <label class="font-bold text-[13px] text-slate-600/90" for="first-name">Preferred Time</label>
+                            <input class="modal-form pl-10" id="first-name" type="time" placeholder="Enter your first name" required>
+                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
+                        </div>
+                    </div>
+                    <div class="grid gap-4 mb-4 grid-cols-2">
+                        <div class="flex flex-col gap-y-2">
+                            <label class="font-bold text-[13px] text-slate-600/90" for="new-patient">Are you a new patient?</label>
+                            <div class="flex items-center gap-x-3">
+                                <input id="new-patient" type="checkbox" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
+                                <label for="new-patient" class="text-[14px] text-slate-700 cursor-pointer">Yes</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div> 
+
         <section class="section mb-32">
             <div class="container">
                 <div class="flex flex-col gap-14 lg:gap-y-16 xl:gap-y-20">
@@ -898,24 +987,6 @@
         </div>
         </div>
     </footer>
-    
-<script>
-    const toggleButton = document.getElementById('toggleServices');
-    const hiddenServices = document.querySelectorAll('#services-list .services-item.hidden');
-
-    let expanded = false;
-
-    toggleButton.addEventListener('click', () => {
-        expanded = !expanded;
-        hiddenServices.forEach(item => item.classList.toggle('hidden', !expanded));
-        toggleButton.innerHTML = expanded 
-            ? `Show less <svg class="w-5 h-5"><use href="#arrow-right-circle"></use></svg>` 
-            : `View all service list <svg class="w-5 h-5"><use href="#arrow-right-circle"></use></svg>`;
-    });
-</script>
-<script>
-   const sendM=document.getElementById(sendMessage);
-
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
 </html>

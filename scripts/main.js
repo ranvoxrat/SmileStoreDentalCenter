@@ -12,6 +12,8 @@ const servicesItem = document.querySelectorAll(".services-item");
 const servicesContents = document.querySelector(".services-contents");
 const servicesMoreButton = document.querySelector(".services-more");
 const aElement = document.querySelectorAll("a");
+const toggleButton = document.getElementById('toggleServices');
+const hiddenServices = document.querySelectorAll('#services-list .services-item.hidden');
 
 // PreLoader
 window.addEventListener("load", function(){
@@ -137,4 +139,26 @@ aElement.forEach(function(item){
     item.addEventListener("click", function(e){
         e.preventDefault();
     });
+});
+
+
+
+    
+    let expanded = false;
+
+    toggleButton.addEventListener('click', () => {
+        expanded = !expanded;
+        hiddenServices.forEach(item => item.classList.toggle('hidden', !expanded));
+        toggleButton.innerHTML = expanded 
+            ? `Show less <svg class="w-5 h-5"><use href="#arrow-right-circle"></use></svg>` 
+            : `View all service list <svg class="w-5 h-5"><use href="#arrow-right-circle"></use></svg>`;
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+    window.openBookingModal = function () {
+        document.getElementById('bookingModal').classList.remove('hidden');
+    };
+    window.closeBookingModal = function () {
+        document.getElementById('bookingModal').classList.add('hidden');
+    };
 });
