@@ -1,4 +1,4 @@
-# Dentalist 
+# Smile Restore Dental Center
 Dentalist is a fully responsive dental website, Responsive for all devices, build using HTML, CSS, Tailwindcss and JavaScript.
 
 ## Features
