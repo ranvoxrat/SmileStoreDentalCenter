@@ -12,8 +12,9 @@ const servicesItem = document.querySelectorAll(".services-item");
 const servicesContents = document.querySelector(".services-contents");
 const servicesMoreButton = document.querySelector(".services-more");
 const aElement = document.querySelectorAll("a");
-const toggleButton = document.getElementById('toggleServices');
-const hiddenServices = document.querySelectorAll('#services-list .services-item.hidden');
+
+const newPatientCheckbox = document.getElementById('new-patient');
+const referralWrapper = document.getElementById('referral-source-wrapper');
 
 // PreLoader
 window.addEventListener("load", function(){
@@ -144,21 +145,51 @@ aElement.forEach(function(item){
 
 
     
+    document.addEventListener('DOMContentLoaded', () => {
+    // Toggle hidden services
+    const toggleButton = document.getElementById('toggleServices');
+    const hiddenServices = document.querySelectorAll('#services-list .services-item.hidden');
     let expanded = false;
 
-    toggleButton.addEventListener('click', () => {
-        expanded = !expanded;
-        hiddenServices.forEach(item => item.classList.toggle('hidden', !expanded));
-        toggleButton.innerHTML = expanded 
-            ? `Show less <svg class="w-5 h-5"><use href="#arrow-right-circle"></use></svg>` 
-            : `View all service list <svg class="w-5 h-5"><use href="#arrow-right-circle"></use></svg>`;
-    });
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            expanded = !expanded;
+            hiddenServices.forEach(item => item.classList.toggle('hidden', !expanded));
+            toggleButton.innerHTML = expanded
+                ? `Show less <svg class="w-5 h-5"><use href="#arrow-right-circle"></use></svg>`
+                : `View all service list <svg class="w-5 h-5"><use href="#arrow-right-circle"></use></svg>`;
+        });
+    }
 
-    document.addEventListener('DOMContentLoaded', () => {
+    // Booking modal open/close
     window.openBookingModal = function () {
-        document.getElementById('bookingModal').classList.remove('hidden');
+        document.getElementById('bookingModal')?.classList.remove('hidden');
     };
-    window.closeBookingModal = function () {
-        document.getElementById('bookingModal').classList.add('hidden');
+    window.closeBookingModal = function () { 
+        document.getElementById('bookingModal')?.classList.add('hidden');
     };
+
+    // Appointment modal open/close
+    window.toggleModal = function (close = false) {
+        const modal = document.getElementById('appointment-wrapper');
+        if (!modal) return;
+        modal.classList.toggle('hidden', close);
+    };
+});
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const newPatientCheckbox = document.getElementById('new-patient');
+    const referralWrapper = document.getElementById('referral-source-wrapper');
+
+    newPatientCheckbox.addEventListener('change', function () {
+        if (this.checked) {
+            referralWrapper.classList.remove('hidden');
+            setTimeout(() => referralWrapper.classList.add('opacity-100'), 10);
+            referralWrapper.classList.remove('opacity-0');
+        } else {
+            referralWrapper.classList.remove('opacity-100');
+            referralWrapper.classList.add('opacity-0');
+            setTimeout(() => referralWrapper.classList.add('hidden'), 300);
+        }
+    });
 });

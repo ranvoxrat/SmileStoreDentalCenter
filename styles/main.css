@@ -449,22 +449,28 @@ html {
   color: rgba(15, 8, 224, 0.732);
 }
 .curved-font1 {
-   font-family:"Dancing Script", cursive!important;
-  font-weight: 700!important;
-  font-size: 36px!important;
-  font-style: normal!important;
-  line-height: 0px!important;
- /* text-transform: uppercase!important; */
-  color: rgba(15, 2, 56, 0.611)!important;
+   font-family:"Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 36px;
+  font-style: normal;
+  line-height: 0px;
+  color: rgba(15, 2, 56, 0.611);
 }
 .curved-font2 {
-   font-family: "Poppins", sans-serif!important;
-  font-weight: 700!important;
-  font-size: 36px!important;
-  font-style: normal!important;
-  line-height: 0px!important;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  font-style: normal;
+  line-height: 0px;
  /* text-transform: uppercase!important; */
-  color: rgba(3, 3, 0, 0.556)!important;
+  color: rgba(3, 3, 0, 0.556);
+}
+.Booked{
+  font-family: "Poppins",sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: rgba(17, 17, 18, 0.732);
+  
 }
 @font-face{
   font-family: "Eudoxus";
@@ -647,20 +653,30 @@ body{
     max-width: 1280px;
   }
 }
-.modal-form{
-  border-radius:4px;
-  border-width: 1px;
-  padding: 7px;
-  
-  padding-inline-start: 3rem;
-  --tw-text-opacity: 1;
-  color: rgb(30 41 59 / var(--tw-text-opacity));
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+.modal-form {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: #334155; 
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 0.6rem 0.75rem;
+    width: 100%;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
+
+.modal-form:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.label {
+    font-weight: 600;
+    font-size: 13px;
+    color: #475569;
+}
+
 .form-input {
   border-radius: 1rem;
   border-width: 1px;
@@ -925,7 +941,9 @@ body{
 .top-\[42px\] {
   top: 42px;
 }
-
+.top-\[35px\] {
+  top: 35px;
+}
 .z-\[999\] {
   z-index: 999;
 }

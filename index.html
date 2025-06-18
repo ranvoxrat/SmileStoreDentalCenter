@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <title>Smile Restore Dental Center</title>
-    <!-- Stylesheet -->
+    <script src="https://cdn.tailwindcss.com"></script>
+   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./styles/main.css" type="text/css">
-    <link rel="icon" href="./assets/images/favicon.png" type="images/png">
-    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-    <style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- <link rel="icon" href="./assets/images/favicon.png" type="images/png"> -->
+  
+    
+   
+    <!-- Scripts -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./styles/main.css" type="text/css">
+    <script defer src="./scripts/main.js"></script>
+     <style>
         .swiper-pagination-bullet-active {
         background-color: #583FBC !important;
         width: 16px;
@@ -19,9 +27,6 @@
         transition: all 0.5s ease-in-out;
         }
     </style>
-    <!-- Scripts -->
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script defer src="./scripts/main.js"></script>
 </head>
 <body>
     <!-- SVG Importing -->
@@ -207,12 +212,12 @@
         <div class="bg-top-main pt-8 px-8 lg:pt-0 rounded-3xl lg:min-h-[500px] xl:min-h-[620px] 2xl:min-h-[760px] gap-y-14 flex flex-col lg:flex-row justify-between items-center bg-[#DBEFFA]">
             
             <!-- IMAGE FIRST ON MOBILE, LAST ON DESKTOP -->
-            <div class="w-full lg:w-1/2 order-first lg:order-last mb-6 lg:mb-0">
+            <div class="w-full lg:w-1/2 order-first lg:order-last lg:mb-0">
                 <img src="./assets/images/prof1.png" alt="" class="mx-auto w-full max-w-[400px] lg:max-w-full">
             </div>
 
             <!-- TEXT CONTENT SECOND ON MOBILE, FIRST ON DESKTOP -->
-            <div class="w-full lg:w-1/2 text-center lg:text-start flex flex-col gap-y-6 lg:gap-y-8 mb-12">
+            <div class="w-full lg:w-1/2 text-center lg:text-start flex flex-col gap-y-6 mb-12">
                 <h1 class="curved-font2">
                     Welcome <span class="curved-font1">To</span>
                 </h1>
@@ -222,101 +227,177 @@
                 <p class="text-slate-800/70 font-medium text-base lg:text-lg w-[90%] mx-auto lg:mx-0">
                     Put your best smile forward with Smile Restore Dental Center. We offer complete dental care for kids and adults, with personalized treatments from our experienced team.
                 </p>
-                <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" type="button"
-                    class="h-12 w-44 bg-primary text-white text-sm font-bold rounded-xl transition-colors hover:bg-indigo-800 mx-auto lg:mx-0">
+                 <!-- OPEN MODAL BUTTON -->
+                <button onclick="toggleModal(false)" class="h-12 w-44 bg-primary text-white text-sm font-bold rounded-xl transition-colors hover:bg-indigo-800 mx-auto lg:mx-0">
                     Book an Appointment
                 </button>
+
+
             </div>
         </div>
     </div>
 </section>
+<!-- Modal Wrapper: full screen on mobile, centered on desktop -->
+<div id="appointment-wrapper" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/50 flex justify-center items-center">
 
- <!-- Main modal -->
-<div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <div class="relative w-1/2 max-h-full">
+    <div class="relative w-full h-full lg:h-auto lg:max-w-3xl lg:px-4 lg:my-10 flex items-center justify-center">
+
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700 p-20">
+        <div class="relative bg-white rounded-none lg:rounded-2xl w-full h-full lg:h-auto shadow-xl">
+
             <!-- Modal header -->
-            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
-                <h3 class="text-lg font-semibold text-gray-900">
-                    Book Appointment
-                </h3>
-                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
-                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                    </svg>
-                    <span class="sr-only">Close modal</span>
+            <div class="flex items-center justify-between p-4 border-b border-gray-200">
+                <h3 class="Booked">Book Appointment</h3>
+                <button type="button"
+                    class="flex text-gray-400 hover:bg-gray-100 hover:text-gray-900 rounded-lg text-sm w-8 h-8 justify-center items-center"
+                    onclick="toggleModal(true)">
+                    <i class="fa fa-times"></i>
                 </button>
             </div>
+
             <!-- Modal body -->
-            <form class="p-4 md:p-5">
-                <div class="row">
-                    <div class="grid gap-4 mb-4 grid-cols-3 sm:grid-c">
-                        <div class="flex flex-col gap-y-2 relative">
-                            <label class="font-bold text-[13px] text-slate-600/90" for="first-name">First Name</label>
-                            <input class="modal-form pl-10" id="first-name" type="text" placeholder="Enter your first name" required>
-                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
-                        </div>
+            <form class="p-6 space-y-6 overflow-y-auto">
 
-                        <div class="flex flex-col gap-y-2 relative">
-                            <label class="font-bold text-[13px] text-slate-600/90" for="middle-name">Middle Initial</label>
-                            <input class="modal-form pl-10" id="middle-name" type="text" placeholder="Enter your middle name" required>
-                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
-                        </div>
+                <!-- FORM FIELDS -->
 
-                        <div class="flex flex-col gap-y-2 relative">
-                            <label class="font-bold text-[13px] text-slate-600/90" for="last-name">Last Name</label>
-                            <input class="modal-form pl-10" id="last-name" type="text" placeholder="Enter your last name" required>
-                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <!-- First Name -->
+                    <div>
+                        <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-user"></i></span>
+                            <input id="first-name" type="text" placeholder="Enter your first name" required
+                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary" />
                         </div>
                     </div>
-                    <div class="grid gap-4 mb-4 grid-cols-2">
-                        <div class="flex flex-col gap-y-2 relative">
-                            <label class="font-bold text-[13px] text-slate-600/90" for="first-name">Email</label>
-                            <input class="modal-form pl-10" id="first-name" type="text" placeholder="Enter your first name" required>
-                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
-                        </div>
 
-                        <div class="flex flex-col gap-y-2 relative">
-                            <label class="font-bold text-[13px] text-slate-600/90" for="middle-name">Contact</label>
-                            <input class="modal-form pl-10" id="middle-name" type="text" placeholder="Enter your middle name" required>
-                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
+                    <!-- Middle Initial -->
+                    <div>
+                        <label for="middle-name" class="block text-sm font-medium text-gray-700">Middle Initial</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-user"></i></span>
+                            <input id="middle-name" type="text" placeholder="Enter middle initial" required
+                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary" />
                         </div>
                     </div>
-                    <div class="grid gap-4 mb-4 grid-cols-1">
-                        <div class="flex flex-col gap-y-2 relative">
-                            <label class="font-bold text-[13px] text-slate-600/90" for="first-name">Address</label>
-                            <input class="modal-form pl-10" id="first-name" type="text" placeholder="Enter your first name" required>
-                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"><use href="#user"></use></svg>
+
+                    <!-- Last Name -->
+                    <div>
+                        <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-user"></i></span>
+                            <input id="last-name" type="text" placeholder="Enter your last name" required
+                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary" />
                         </div>
                     </div>
-                  <div class="grid gap-4 mb-4 grid-cols-1 sm:grid-cols-2">
-    <div class="flex flex-col gap-y-2 relative">
-        <label for="preferred-date" class="font-bold text-[13px] text-slate-600/90">Preferred Date</label>
-        <input type="date" id="preferred-date" class="modal-form pl-10" required>
+                </div>
+
+                <!-- Email & Contact -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-envelope"></i></span>
+                            <input id="email" type="email" placeholder="Enter your email" required
+                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="contact" class="block text-sm font-medium text-gray-700">Contact</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-phone"></i></span>
+                            <input id="contact" type="text" placeholder="Enter your contact" required
+                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div>
+                    <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-map-marker"></i></span>
+                        <input id="address" type="text" placeholder="Enter your address" required
+                            class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary" />
+                    </div>
+                </div>
+
+                <!-- Date & Time -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label for="preferred-date" class="block text-sm font-medium text-gray-700">Preferred Date</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-calendar"></i></span>
+                            <input type="date" id="preferred-date" required
+                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="preferred-time" class="block text-sm font-medium text-gray-700">Preferred Time</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-clock"></i></span>
+                            <select id="preferred-time" required
+                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary">
+                                <option value="" disabled selected>Select a time</option>
+                                <option value="10am-11am">10:00 AM - 11:00 AM</option>
+                                <option value="11am-12pm">11:00 AM - 12:00 PM</option>
+                                <option value="12pm-1pm">12:00 PM - 01:00 PM</option>
+                                <option value="1pm-2pm">01:00 PM - 02:00 PM</option>
+                                <option value="2pm-3pm">02:00 PM - 03:00 PM</option>
+                                <option value="3pm-4pm">03:00 PM - 04:00 PM</option>
+                                <option value="4pm-4:30pm">04:00 PM - 04:30 PM</option>
+                                <option value="4:30pm-5pm">04:30 PM - 05:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Patient & Referral -->
+<div class="space-y-2">
+    <div class="flex items-center gap-2">
+        <input id="new-patient" type="checkbox"
+            class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-primary">
+        <label for="new-patient" class="text-sm text-gray-700">Are you a new patient?</label>
     </div>
 
-    <div class="flex flex-col gap-y-2 relative">
-        <label for="preferred-time" class="font-bold text-[13px] text-slate-600/90">Preferred Time</label>
-        <input type="time" id="preferred-time" class="modal-form pl-10" required>
+    <div id="referral-source-wrapper" class="hidden transition-opacity duration-300 opacity-0">
+        <label for="referral-source" class="block text-sm font-medium text-gray-700 mb-1">
+            Where did you find out about Smile Restore Dental Center?
+        </label>
+        <div class="relative">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                <i class="fa fa-share-alt"></i>
+            </span>
+            <select id="referral-source"
+                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary">
+                <option value="" disabled selected>Select an option</option>
+                <option value="1">Facebook</option>
+                <option value="5">Instagram</option>
+                <option value="6">TikTok</option>
+                <option value="2">Marketing campaign</option>
+                <option value="3">Patient Referral</option>
+            </select>
+        </div>
     </div>
 </div>
 
-                    <div class="grid gap-4 mb-4 grid-cols-2">
-                        <div class="flex flex-col gap-y-2">
-                            <label class="font-bold text-[13px] text-slate-600/90" for="new-patient">Are you a new patient?</label>
-                            <div class="flex items-center gap-x-3">
-                                <input id="new-patient" type="checkbox" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
-                                <label for="new-patient" class="text-[14px] text-slate-700 cursor-pointer">Yes</label>
-                            </div>
-                        </div>
-                    </div>
 
+
+                <!-- Submit -->
+                <div class="text-right">
+                    <button type="submit"
+                        class="px-5 py-2 rounded-md bg-primary text-white font-medium text-sm hover:bg-primary-dark focus:ring-4 focus:ring-primary/50 transition">
+                        Submit
+                    </button>
                 </div>
             </form>
         </div>
     </div>
-</div> 
+</div>
+
+
+
 
         <section class="section mb-32">
             <div class="container">
@@ -338,7 +419,7 @@
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4">
                             <img class="w-full rounded-[32px]" src="./assets/images/img1.jpg" alt="">
                             <div class="text-center space-y-2">
-                                <h3 class="text-slate-800 font-bold">General Dentistry</h3>
+                                <h3 class="text-slate-800 font-bold uppercase">General Dentistry</h3>
                                 <p class="text-[15px] font-medium text-slate-800/50">Dental Cleaning / Oral Prophylaxis, Permanent Tooth Filling, Pit & Fissure Sealants and more.</p>
                             </div>
                         </div>
@@ -346,7 +427,7 @@
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4">
                             <img class="w-full rounded-[32px]" src="./assets/images/img2.jpg" alt="">
                             <div class="text-center space-y-2">
-                                <h3 class="text-slate-800 font-bold">Dental Implants</h3>
+                                <h3 class="text-slate-800 font-bold uppercase">Dental Implants</h3>
                                 <p class="text-[15px] font-medium text-slate-800/50">Missing a tooth? Restore those gaps with teeth that feel and look like your own.</p>
                             </div>
                         </div>
@@ -354,7 +435,7 @@
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4">
                             <img class="w-full rounded-[32px]" src="./assets/images/img3.jpg" alt="">
                             <div class="text-center space-y-2">
-                                <h3 class="text-slate-800 font-bold">Consultation</h3>
+                                <h3 class="text-slate-800 font-bold uppercase">Consultation</h3>
                                 <p class="text-[15px] font-medium text-slate-800/50">Don’t know where to start? Book a consultation with our specialists to know more about your oral health. We also offer diagnostics such as X-rays and 3D scans.</p>
                             </div>
                         </div>
@@ -363,21 +444,21 @@
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4 hidden">
                             <img class="w-full rounded-[32px]" src="./assets/images/img4.jpg" alt="">
                             <div class="text-center space-y-2">
-                                <h3 class="text-slate-800 font-bold">DENTAL CROWN & VENEERS</h3>
+                                <h3 class="text-slate-800 font-bold uppercase">DENTAL CROWN & VENEERS</h3>
                                 <p class="text-[15px] font-medium text-slate-800/50">A whole new you! We have solutions to give you a brand new smile with veneers, dental crowns or bridges.</p>
                             </div>
                         </div>
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4 hidden">
                             <img class="w-full rounded-[32px]" src="./assets/images/img5.jpg" alt="">
                             <div class="text-center space-y-2">
-                                <h3 class="text-slate-800 font-bold">PEDIATRIC DENTISTRY</h3>
+                                <h3 class="text-slate-800 font-bold uppercase">PEDIATRIC DENTISTRY</h3>
                                 <p class="text-[15px] font-medium text-slate-800/50">Looking for the best dentist for your child? Book an appointment with our pediatric dentists that will take care of your little one.</p>
                             </div>
                         </div>
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4 hidden">
                             <img class="w-full rounded-[32px]" src="./assets/images/img6.jpg" alt="">
                             <div class="text-center space-y-2">
-                                <h3 class="text-slate-800 font-bold">PAIN RELIEF</h3>
+                                <h3 class="text-slate-800 font-bold uppercase">PAIN RELIEF</h3>
                                 <p class="text-[15px] font-medium text-slate-800/50">Can’t sleep due to a toothache? Contact us or come over to our clinic for an emergency treatment.</p>
                             </div>
                         </div>
