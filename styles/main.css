@@ -438,7 +438,9 @@ video {
 html {
   scroll-behavior: smooth;
 }
-
+.img-logo{
+  width: 45%;
+}
 .curved-font {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
@@ -1696,6 +1698,9 @@ body{
   line-height: 4rem;
   text-transform: uppercase;
   color: rgba(15, 8, 224, 0.732);
+}
+.img-logo{
+  width: 15%;
 }
 }
 
