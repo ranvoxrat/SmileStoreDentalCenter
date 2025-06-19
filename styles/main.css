@@ -821,53 +821,36 @@ body{
   width: 0.75rem;
   opacity: 1;
 }
-
 .post-img {
   position: relative;
 }
 
-.post-img:hover::before, .post-img:hover::after {
+.post-img:hover::before,
+.post-img:hover::after {
   pointer-events: auto;
   visibility: visible;
   opacity: 1;
 }
 
-.post-img::before, .post-img::after{
-  content: "";
+.post-img::before,
+.post-img::after {
   transition: all 0.2s ease-in-out 50ms;
   pointer-events: none;
   visibility: hidden;
   position: absolute;
-  inset: 0px;
+  inset: 0;
   opacity: 0;
+  content: "";
+  border-radius: 32px; /* Match the rounded-[32px] for consistent look */
 }
 
 .post-img::before {
-  background-color: rgb(255 255 255 / 0.8);
+  background-color: rgba(255, 255, 255, 0.6);
 }
-.post-img::after {
-  content: "Logo";
-  position: absolute;
-  inset: 0; /* top:0; right:0; bottom:0; left:0 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff; /* Optional: text color */
-  font-size: 1.5rem; /* Optional: text size */
-  background: rgba(0, 0, 0, 0.4); /* Optional: background overlay */
-}
-/* .post-img::after{
-  content: "Logo";
-  
-  background: url(../assets/images/logo.svg) center no-repeat;
-} */
 
-.post-img:hover + .post-publish-date {
-  pointer-events: none;
-  visibility: hidden;
-  height: 0px;
-  width: 0px;
-  opacity: 0;
+.post-img::after {
+  background: url("../assets/images/logo/logo.png") center center no-repeat;
+  background-size: contain;
 }
 
 .post-publish-date{

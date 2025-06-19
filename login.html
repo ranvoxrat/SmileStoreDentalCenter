@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-white">
+
+  <div class="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-5xl md:h-[50vh]">
+
+    <!-- Left side -->
+    <div class="w-full md:w-1/2 bg-cover bg-center relative"
+      style="background-image: linear-gradient(to left, rgba(30, 77, 138, 0.563), rgba(30, 64, 175, 0.503)), url('./assets/images/img-bg.jpg');">
+      <div class="flex flex-col items-center justify-center text-center text-white h-full px-6 py-12 space-y-4">
+        <img src="./assets/images/logo/logo.png" alt="Logo" class="w-1/2 mx-auto">
+        <!-- <p class="text-sm">Access your dashboard securely and manage everything in one place.</p> -->
+      </div>
+    </div>
+
+    <!-- Right side -->
+    <div class="w-full md:w-1/2 flex items-center justify-center bg-white p-8 h-full">
+      <div class="w-full max-w-sm">
+
+        <h4 class="text-2xl font-bold relative pb-2 mb-8">
+          Admin <span class="font-light">Login</span>
+          <span class="absolute left-0 bottom-0 h-1.5 w-12 rounded bg-blue-600"></span>
+        </h4>
+
+        <form method="post" action="admin-dashboard.php" class="space-y-4">
+
+          <div>
+            <label for="username" class="block text-sm font-medium mb-1">Username</label>
+            <div class="flex items-center border rounded overflow-hidden bg-white">
+              <span class="px-3 text-blue-600"><i class="fa fa-user"></i></span>
+              <input type="text" id="username" name="username"
+                class="w-full px-3 py-2 focus:outline-none focus:ring-0 focus:border-blue-400" placeholder="Enter username" required>
+            </div>
+          </div>
+
+          <div>
+            <label for="password" class="block text-sm font-medium mb-1">Password</label>
+            <div class="flex items-center border rounded overflow-hidden bg-white">
+              <span class="px-3 text-blue-600"><i class="fa fa-lock"></i></span>
+              <input type="password" id="password" name="password"
+                class="w-full px-3 py-2 focus:outline-none focus:ring-0 focus:border-blue-400" placeholder="Enter password" required>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <button type="submit"
+              class="w-full py-2 rounded text-white font-medium bg-gradient-to-r from-blue-700 to-blue-500 transition-transform duration-300 hover:scale-105">
+              <i class="fa-solid fa-right-to-bracket mr-2"></i>Login
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
