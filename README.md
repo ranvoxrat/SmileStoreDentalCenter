@@ -1,16 +1,3 @@
-# Smile Restore Dental Center
-Smile Restore Dental Center is a fully responsive dental website, Responsive for all devices, build using HTML, CSS, Tailwindcss and JavaScript.
-
-## Features
-- Fully Responsive
-- Live previews
-- Booking appointment
-
-
-## 🔗 Live Preview
-click the link to view live preview ➡
-[Dentalist](https://2awebdeveloper.github.io/dentalist/)
-
 
 ## 📷 Screenshots
 ![Smile Restore Dental Center Desktop](https://ranvoxrat.github.io/SmileStoreDentalCenter/assets/images/screenshot.png)
