@@ -1,5 +1,5 @@
 ## 📷 Screenshots
-![Smile Restore Dental Center Desktop](https://ranvoxrat.github.io/SmileStoreDentalCenter/dentalist/main/assets/images/screenshot.png)
+![Smile Restore Dental Center Desktop](https://ranvoxrat.github.io/SmileStoreDentalCenter/assets/images/screenshot.png)
 # Welcome to Smile Restore Dental Center
 Put your best smile forward with Smile Restore Dental Center. We offer complete dental care for kids and adults, with personalized treatments from our experienced team.
 
