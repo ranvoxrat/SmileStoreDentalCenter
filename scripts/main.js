@@ -5,6 +5,10 @@
 const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
 const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
 const mobileMenuContainer = document.getElementById("mobile-menu-container");
+
+
+// const mobileMenuContainer = document.getElementById('mobile-menu-container');
+//     const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
 const mobileMenuClose = document.getElementById("close-button");
 const preLoader = document.querySelector(".preload-container");
 const sections = document.querySelectorAll(".section");
@@ -192,4 +196,14 @@ aElement.forEach(function(item){
             setTimeout(() => referralWrapper.classList.add('hidden'), 300);
         }
     });
+});
+
+
+
+const bookAppointmentBtn = document.getElementById('book-appointment-mobile');
+const appointmentModal = document.getElementById('appointment-wrapper');
+
+bookAppointmentBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    appointmentModal.classList.remove('hidden');
 });

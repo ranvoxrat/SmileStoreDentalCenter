@@ -121,7 +121,7 @@
                     <div id="mobile-menu-overlay" class="hidden fixed inset-0 bg-black/40 transition-all z-[999]">
                     </div>
                     <!-- Mobile menu container --> 
-                    <div id="mobile-menu-container" class="w-80 bg-white fixed top-0 -left-80 bottom-0 transition-all flex flex-col z-[999]">
+                    <div id="mobile-menu-container" class="w-80 bg-white fixed z-50 top-0 -left-80 bottom-0 transition-all flex flex-col z-[999]">
                         <!-- Logo & Close Button -->
                         <div class="flex items-center justify-between p-4 border-b border-b-gray-100/50">
                             <!-- <img src="./assets/images/logo.svg" alt=""> -->
@@ -194,7 +194,8 @@
                         </nav>
                         <!-- Button -->
                         <div class="p-4">
-                            <a class="block w-full h-12 leading-[2.8rem] bg-primary text-white text-sm font-bold text-center rounded-xl transition-colors hover:bg-indigo-800" href="#">Book an appointment</a>
+                            <!-- <a class="block w-full h-12 leading-[2.8rem] bg-primary text-white text-sm font-bold text-center rounded-xl transition-colors hover:bg-indigo-800" href="#">Book an appointment</a> -->
+                            <button id="book-appointment-mobile" onclick="toggleModal(false)" class="block w-full h-12 leading-[2.8rem] bg-primary text-white text-sm font-bold text-center rounded-xl transition-colors hover:bg-indigo-800">Book an Appointment</button>
                         </div>
                     </div>
                 </div>
@@ -235,7 +236,7 @@
     </div>
 </section>
 <!-- Modal Wrapper -->
-<div id="appointment-wrapper" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center">
+<div id="appointment-wrapper" class="hidden fixed inset-0 z-[1000] bg-black/50 flex items-center justify-center">
 
     <div class="relative w-full h-full max-h-screen lg:h-auto lg:max-w-3xl lg:px-4 lg:my-10 flex items-center justify-center">
 
