@@ -378,9 +378,11 @@
                 <div class="space-y-2">
                     <div class="flex items-center gap-2">
                         <input id="new-patient" type="checkbox"
-                            class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-primary">
+                            class="w-5 h-5 appearance-none border-2 border-blue-600 rounded checked:bg-blue-500 checked:border-blue-500  focus:ring-2 focus:ring-blue-600">
                         <label for="new-patient" class="text-sm text-gray-700">Are you a new patient?</label>
                     </div>
+
+
 
                     <div id="referral-source-wrapper"
                         class="hidden transition-opacity duration-300 opacity-0">
@@ -1100,5 +1102,7 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./scripts/formValidator.js"></script>
 </body>
 </html>
