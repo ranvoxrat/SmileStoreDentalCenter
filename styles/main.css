@@ -479,7 +479,8 @@ html {
   
 }
 .gradient-blue{
-  background-image: linear-gradient(to right, rgba(5, 5, 163, 0.712),rgb(166, 0, 255))!important;
+  background-color: #072e6b;
+  /* background-image: linear-gradient(to right, rgba(5, 21, 163, 0.808),rgb(11, 150, 188))!important; */
 }
 .fa-calendar-days{
    color: rgb(255, 255, 255);
