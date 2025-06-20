@@ -474,12 +474,15 @@ html {
   font-family: "Poppins",sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: rgb(8, 8, 137);
+  color: rgb(255, 255, 255)!important;
   text-transform: uppercase;
   
 }
+.gradient-blue{
+  background-image: linear-gradient(to right, rgba(5, 5, 163, 0.712),rgb(166, 0, 255))!important;
+}
 .fa-calendar-days{
-   color: rgb(8, 8, 137);
+   color: rgb(255, 255, 255);
 }
 @font-face{
   font-family: "Eudoxus";
