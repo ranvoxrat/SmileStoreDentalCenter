@@ -470,12 +470,16 @@ html {
  /* text-transform: uppercase!important; */
   color: rgba(3, 3, 0, 0.556);
 }
-.Booked{
+.Booked {
   font-family: "Poppins",sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   color: rgb(8, 8, 137);
+  text-transform: uppercase;
   
+}
+.fa-calendar-days{
+   color: rgb(8, 8, 137);
 }
 @font-face{
   font-family: "Eudoxus";

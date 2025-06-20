@@ -234,19 +234,18 @@
         </div>
     </div>
 </section>
-<!-- Modal Wrapper: full screen on mobile, centered on desktop -->
-<div id="appointment-wrapper" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/50 flex justify-center items-center">
+<!-- Modal Wrapper -->
+<div id="appointment-wrapper" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center">
 
-    <div class="relative w-full h-auto lg:h-auto lg:max-w-3xl lg:px-4 lg:my-10 flex items-center justify-center">
+    <div class="relative w-full h-full max-h-screen lg:h-auto lg:max-w-3xl lg:px-4 lg:my-10 flex items-center justify-center">
 
         <!-- Modal content -->
-        <div class="relative bg-white rounded-none lg:rounded-2xl w-full h-full lg:h-auto shadow-xl">
+        <div class="relative bg-white rounded-none lg:rounded-2xl w-full h-full lg:h-auto shadow-xl flex flex-col">
 
-            <!-- Modal header -->
-            <div class="flex items-center justify-between p-4 border-b border-gray-200">
-                <span class="flex justify-end align-center">
-                    <img src="./assets/images/logo/SRDC-Icon.png" alt="logo" class="mx-auto w-10 ">
-                    <h3 class="Booked">Book Appointment</h3>
+            <!-- Modal header (Sticky for scrolling on mobile) -->
+            <div class="sticky top-0 bg-white flex items-center justify-between p-4 border-b border-gray-200 z-10">
+                <span class="inline-flex items-center gap-2 text-gray-800 text-lg font-medium">
+                    <i class="fa-solid fa-calendar-days"></i> Book Appointment
                 </span>
                 <button type="button"
                     class="flex text-gray-400 hover:bg-gray-100 hover:text-gray-900 rounded-lg text-sm w-8 h-8 justify-center items-center"
@@ -255,39 +254,46 @@
                 </button>
             </div>
 
-            <!-- Modal body -->
-            <form class="p-6 space-y-6 overflow-y-auto">
+            <!-- Modal body (Scrollable on mobile) -->
+            <form class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-6">
 
                 <!-- FORM FIELDS -->
 
+                <!-- Name Fields -->
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <!-- First Name -->
                     <div>
                         <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
                         <div class="relative">
-                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-user"></i></span>
-                            <input id="first-name" type="text" placeholder="Enter your first name" required
-                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary" />
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                                <i class="fa fa-user"></i>
+                            </span>
+                            <input id="first-name" type="text" required
+                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary"
+                                placeholder="Enter your first name" />
                         </div>
                     </div>
 
-                    <!-- Middle Initial -->
                     <div>
                         <label for="middle-name" class="block text-sm font-medium text-gray-700">Middle Initial</label>
                         <div class="relative">
-                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-user"></i></span>
-                            <input id="middle-name" type="text" placeholder="Enter middle initial" required
-                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary" />
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                                <i class="fa fa-user"></i>
+                            </span>
+                            <input id="middle-name" type="text" required
+                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary"
+                                placeholder="M.I." />
                         </div>
                     </div>
 
-                    <!-- Last Name -->
                     <div>
                         <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
                         <div class="relative">
-                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-user"></i></span>
-                            <input id="last-name" type="text" placeholder="Enter your last name" required
-                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary" />
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                                <i class="fa fa-user"></i>
+                            </span>
+                            <input id="last-name" type="text" required
+                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary"
+                                placeholder="Enter your last name" />
                         </div>
                     </div>
                 </div>
@@ -297,17 +303,24 @@
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                         <div class="relative">
-                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-envelope"></i></span>
-                            <input id="email" type="email" placeholder="Enter your email" required
-                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary" />
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                            <input id="email" type="email" required
+                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary"
+                                placeholder="Enter your email" />
                         </div>
                     </div>
+
                     <div>
                         <label for="contact" class="block text-sm font-medium text-gray-700">Contact</label>
                         <div class="relative">
-                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-phone"></i></span>
-                            <input id="contact" type="text" placeholder="Enter your contact" required
-                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary" />
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                                <i class="fa fa-phone"></i>
+                            </span>
+                            <input id="contact" type="text" required
+                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary"
+                                placeholder="Enter your contact" />
                         </div>
                     </div>
                 </div>
@@ -316,9 +329,12 @@
                 <div>
                     <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
                     <div class="relative">
-                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-map-marker"></i></span>
-                        <input id="address" type="text" placeholder="Enter your address" required
-                            class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary" />
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                            <i class="fa fa-map-marker"></i>
+                        </span>
+                        <input id="address" type="text" required
+                            class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary"
+                            placeholder="Enter your address" />
                     </div>
                 </div>
 
@@ -327,8 +343,10 @@
                     <div>
                         <label for="preferred-date" class="block text-sm font-medium text-gray-700">Preferred Date</label>
                         <div class="relative">
-                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-calendar"></i></span>
-                            <input type="date" id="preferred-date" required
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                                <i class="fa fa-calendar"></i>
+                            </span>
+                            <input id="preferred-date" type="date" required
                                 class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary" />
                         </div>
                     </div>
@@ -336,10 +354,12 @@
                     <div>
                         <label for="preferred-time" class="block text-sm font-medium text-gray-700">Preferred Time</label>
                         <div class="relative">
-                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa fa-clock"></i></span>
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                                <i class="fa fa-clock"></i>
+                            </span>
                             <select id="preferred-time" required
                                 class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary">
-                                <option value="" disabled selected>Select a time</option>
+                                <option value="" disabled selected>Select time</option>
                                 <option value="10am-11am">10:00 AM - 11:00 AM</option>
                                 <option value="11am-12pm">11:00 AM - 12:00 PM</option>
                                 <option value="12pm-1pm">12:00 PM - 01:00 PM</option>
@@ -354,48 +374,46 @@
                 </div>
 
                 <!-- New Patient & Referral -->
-<div class="space-y-2">
-    <div class="flex items-center gap-2">
-        <input id="new-patient" type="checkbox"
-            class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-primary">
-        <label for="new-patient" class="text-sm text-gray-700">Are you a new patient?</label>
-    </div>
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2">
+                        <input id="new-patient" type="checkbox"
+                            class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-primary">
+                        <label for="new-patient" class="text-sm text-gray-700">Are you a new patient?</label>
+                    </div>
 
-    <div id="referral-source-wrapper" class="hidden transition-opacity duration-300 opacity-0">
-        <label for="referral-source" class="block text-sm font-medium text-gray-700 mb-1">
-            Where did you find out about Smile Restore Dental Center?
-        </label>
-        <div class="relative">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
-                <i class="fa fa-share-alt"></i>
-            </span>
-            <select id="referral-source"
-                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary">
-                <option value="" disabled selected>Select an option</option>
-                <option value="1">Facebook</option>
-                <option value="5">Instagram</option>
-                <option value="6">TikTok</option>
-                <option value="2">Marketing campaign</option>
-                <option value="3">Patient Referral</option>
-            </select>
-        </div>
-    </div>
-</div>
+                    <div id="referral-source-wrapper"
+                        class="hidden transition-opacity duration-300 opacity-0">
+                        <label for="referral-source"
+                            class="block text-sm font-medium text-gray-700 mb-1">Where did you find out about us?</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                                <i class="fa fa-share-alt"></i>
+                            </span>
+                            <select id="referral-source"
+                                class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="1">Facebook</option>
+                                <option value="2">Marketing Campaign</option>
+                                <option value="3">Patient Referral</option>
+                                <option value="5">Instagram</option>
+                                <option value="6">TikTok</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
 
-
-
-                <!-- Submit -->
-                <div class="text-right">
+                <!-- Submit Button -->
+                <div class="text-right pt-2">
                     <button type="submit"
                         class="px-5 py-2 rounded-md bg-primary text-white font-medium text-sm hover:bg-primary-dark focus:ring-4 focus:ring-primary/50 transition">
                         Submit
                     </button>
                 </div>
+
             </form>
         </div>
     </div>
 </div>
-
 
 
 
