@@ -6,9 +6,6 @@ const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
 const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
 const mobileMenuContainer = document.getElementById("mobile-menu-container");
 
-
-// const mobileMenuContainer = document.getElementById('mobile-menu-container');
-//     const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
 const mobileMenuClose = document.getElementById("close-button");
 const preLoader = document.querySelector(".preload-container");
 const sections = document.querySelectorAll(".section");
@@ -151,19 +148,26 @@ aElement.forEach(function(item){
     
     document.addEventListener('DOMContentLoaded', () => {
     // Toggle hidden services
-    const toggleButton = document.getElementById('toggleServices');
+   const toggleButton = document.getElementById('toggleServices');
     const hiddenServices = document.querySelectorAll('#services-list .services-item.hidden');
+    const bookButton = document.getElementById('bookAppointmentBtn');
     let expanded = false;
 
     if (toggleButton) {
         toggleButton.addEventListener('click', () => {
             expanded = !expanded;
+
             hiddenServices.forEach(item => item.classList.toggle('hidden', !expanded));
+
             toggleButton.innerHTML = expanded
                 ? `Show less <svg class="w-5 h-5"><use href="#arrow-right-circle"></use></svg>`
                 : `View all service list <svg class="w-5 h-5"><use href="#arrow-right-circle"></use></svg>`;
+
+            // ✅ Show or hide the Book button
+            bookButton.classList.toggle('hidden', !expanded);
         });
     }
+
 
     // Booking modal open/close
     window.openBookingModal = function () {

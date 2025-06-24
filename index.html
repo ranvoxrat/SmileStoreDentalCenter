@@ -59,9 +59,10 @@
         <symbol id="rss" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 0 0-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
         </symbol>
-        <symbol id="shop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+       <symbol id="location" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25c-4.28 0-7.5 3.22-7.5 7.5 0 5.22 7.5 12 7.5 12s7.5-6.78 7.5-12c0-4.28-3.22-7.5-7.5-7.5zM12 11.25a1.875 1.875 0 1 1 0-3.75 1.875 1.875 0 0 1 0 3.75z" />
         </symbol>
+
         <symbol id="close-mark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </symbol>
@@ -88,27 +89,34 @@
                 <nav class="hidden lg:block">
                     <ul class="flex gap-x-10 xl:gap-x-12 text-slate-800 text-sm font-bold child:transition-colors child:delay-75 child-hover:text-primary">
                         <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Services</a>
-                        </li>
-                        <li>
-                            <a href="#">Clinic Location</a>
-                        </li>
-                        <li>
-                            <a href="#">Blog</a>
+                            <a href="#main">Home</a>
                         </li>
                         <li>
                             <a href="#">About Us</a>
                         </li>
                         <li>
-                            <a href="#">Contact Us</a>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Location & Contact Details</a>
+                        </li>
+                        <li>                          
+                          <a href="#" onclick="window.location.href='faqs.html'; return false;">
+                                FAQs
+                            </a>
                         </li>
                     </ul>
                 </nav>
                 <!-- Header Button -->
-                <a class="hidden lg:block h-full w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800" href="#">Book an Appointment</a>
+                <!-- <a class="hidden lg:block h-full w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800" href="#">Book an Appointment</a> -->
+                <button 
+                    id="book-appointment-mobile"
+                    onclick="toggleModal(false)"
+                    class="hidden lg:inline-flex items-center justify-center px-6 py-3 bg-primary text-white text-sm font-bold rounded-xl transition hover:bg-indigo-800"
+                    >
+                    Book an Appointment
+                    </button>
+
                 <!-- Mobile Menu -->
                 <div class="lg:hidden relative">
                     <!-- Mobile Menu Toggle Icon -->
@@ -148,34 +156,7 @@
                                 <!-- menu item -->
                                 <li>
                                     <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">
-                                            <use href="#gear"></use>
-                                        </svg>
-                                        Services
-                                    </a>
-                                </li>
-                                <!-- menu item -->
-                                <li>
-                                    <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">
-                                            <use href="#shop"></use>
-                                        </svg>
-                                        Clinic Location
-                                    </a>
-                                </li>
-                                <!-- menu item -->
-                                <li>
-                                    <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">
-                                            <use href="#rss"></use>
-                                        </svg>
-                                        Blog
-                                    </a>
-                                </li>
-                                <!-- menu item -->
-                                <li>
-                                    <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">
+                                        <svg class="w-5 h-5">                                                                                     
                                             <use href="#users"></use>
                                         </svg>
                                         About Us
@@ -184,12 +165,33 @@
                                 <!-- menu item -->
                                 <li>
                                     <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">
-                                            <use href="#envelope"></use>
+                                        <svg class="w-5 h-5">   
+                                             <use href="#gear"></use>                                     
                                         </svg>
-                                        Contact Us
+                                       Services
                                     </a>
                                 </li>
+                                <!-- menu item -->
+                                <li>
+                                    <a class="flex items-center gap-x-1" href="#">
+                                        <svg class="w-5 h-5">
+                                             <use href="#location"></use>                                          
+                                        </svg>
+                                        Location & Contact Details
+                                    </a>
+                                </li>
+                                <!-- menu item -->
+                                <li>
+                                 
+                                  <a class="flex items-center gap-x-1" href="#" onclick="window.open('faqs.html', '_blank')">
+                                        <i class="fa-solid fa-circle-question"></i>
+                                        FAQs
+                                    </a>
+
+
+                                </li>
+                                <!-- menu item -->
+                               
                             </ul>
                         </nav>
                         <!-- Button -->
@@ -204,37 +206,22 @@
     </header>
     <!-- Main -->
     <main id="main">
-        <!-- Top Main Section -->
-        <section class="mb-12 lg:mb-16 xl:mb-24">
+    <section class="mb-12 lg:mb-16 xl:mb-24">
     <div class="container">
-        <div class="bg-top-main pt-8 px-8 lg:pt-0 rounded-3xl lg:min-h-[500px] xl:min-h-[620px] 2xl:min-h-[760px] gap-y-14 flex flex-col lg:flex-row justify-between items-center bg-[#DBEFFA]">
-            
-            <!-- IMAGE FIRST ON MOBILE, LAST ON DESKTOP -->
-            <div class="w-full lg:w-1/2 order-first lg:order-last lg:mb-0">
-                <img src="./assets/images/prof1.png" alt="" class="mx-auto w-full max-w-[400px] lg:max-w-full">
-            </div>
+        <div class="bg-top-main rounded-3xl flex flex-col  lg:flex-row overflow-hidden lg:min-h-[500px] xl:min-h-[620px] 2xl:min-h-[760px] ">
 
-            <!-- TEXT CONTENT SECOND ON MOBILE, FIRST ON DESKTOP -->
-            <div class="w-full lg:w-1/2 text-center lg:text-start flex flex-col gap-y-6 mb-12">
-                <h1 class="curved-font2">
-                    Welcome <span class="curved-font1">To</span>
-                </h1>
-                <h1 class="curved-font">
-                    Smile Restore Dental Center
-                </h1>
-                <p class="text-slate-800/70 font-medium text-base lg:text-lg w-[90%] mx-auto lg:mx-0">
-                    Put your best smile forward with Smile Restore Dental Center. We offer complete dental care for kids and adults, with personalized treatments from our experienced team.
-                </p>
-                 <!-- OPEN MODAL BUTTON -->
-                <button onclick="toggleModal(false)" class="h-12 w-44 bg-primary text-white text-sm font-bold rounded-xl transition-colors hover:bg-indigo-800 mx-auto lg:mx-0">
-                    Book an Appointment
-                </button>
-
-
-            </div>
+        <!-- LEFT SIDE TEXT (50% width on desktop) -->
+        <div class="w-full lg:w-auto flex flex-col justify-center text-start lg:text-start p-8 lg:p-12">
+            <h1 class="curved-font">Your</h1>
+            <h1 class="curved-font1">BEST SMILE</h1>
+            <h1 class="curved-font2">Starts Here</h1>
+            <button onclick="toggleModal(false)" class="btn-modal"><i class="fa-solid fa-calendar-days"></i> Book an Appointment</button>
+        </div>
         </div>
     </div>
-</section>
+    </section>
+
+
 <!-- Modal Wrapper -->
 <div id="appointment-wrapper" class="hidden fixed inset-0 z-[1000] bg-black/50 flex items-center justify-center">
 
@@ -347,7 +334,7 @@
                             <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
                                 <i class="fa fa-calendar"></i>
                             </span>
-                            <input id="preferred-date" type="date" required
+                            <input id="preferred-date" type="date" placeholder="Select preferred date" required
                                 class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary" />
                         </div>
                     </div>
@@ -417,70 +404,136 @@
         </div>
     </div>
 </div>
+<!-- About Us Section -->
+<section class="section mb-32">
+  <div class="container">
+    <div class="flex flex-col gap-14 lg:gap-y-16 xl:gap-y-20 text-center">
 
+      <!-- About Us info -->
+      <div class="flex flex-col gap-y-2">
+        <h1 class="text-head">ABOUT US</h1>
+        <!-- <h2 class="text-slate-800 text-4xl leading-snug font-bold">Who We Are</h2> -->
+        <p class="text-sub">
+          Our mission is simple — to create a comfortable space where you can achieve a healthier, more confident smile.
+        </p>
+      </div>
+
+      <!-- Features -->
+      <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-5 child:transition-all child-hover:shadow-2xl child-hover:shadow-slate-400/20 child-hover:border-gray-100 child:cursor-pointer">
+
+        <!-- Feature 1 -->
+        <div class="rounded-[32px] border p-6 flex flex-col gap-y-4">
+          <img src="./assets/images/website-img/Green Check.png" alt="Check Icon" class="w-12 h-12 mx-auto object-contain">
+          <div class="text-center space-y-2">
+            <h3 class="text-slate-800 font-bold">Clean & Protected</h3>
+            <p class="text-sub">
+              Every instrument is thoroughly sterilized, and our clinic is disinfected regularly to ensure a safe and clean environment for you.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="rounded-[32px] border p-6 flex flex-col gap-y-4">
+          <img src="./assets/images/website-img/Green Check.png" alt="Check Icon" class="w-12 h-12 mx-auto object-contain">
+          <div class="text-center space-y-2">
+            <h3 class="text-slate-800 font-bold">Professional & Compassionate Team</h3>
+            <p class="text-sub">
+              Our team combines skill and compassion to ensure that you receive the service that you deserve.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="rounded-[32px] border p-6 flex flex-col gap-y-4">
+          <img src="./assets/images/website-img/Green Check.png" alt="Check Icon" class="w-12 h-12 mx-auto object-contain">
+          <div class="text-center space-y-2">
+            <h3 class="text-slate-800 font-bold">Patient-Focused Care</h3>
+            <p class="text-sub">
+              Your comfort, concerns, and dental goals are always our top priorities.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
         <section class="section mb-32">
             <div class="container">
-                <div class="flex flex-col gap-14 lg:gap-y-16 xl:gap-y-20">
+                <div class="flex flex-col gap-14 lg:gap-y-16 xl:gap-y-20 text-center">
                     <!-- Services info contents -->
-                    <div class="services-contents flex flex-col items-center justify-center lg:flex-row lg:justify-between lg:items-center gap-y-4 transition-all">
-                        <div class="text-center lg:text-start">
-                            <h3 class="text-sm text-primary font-bold mb-3">SERVICES</h3>
-                            <p class="text-slate-800 text-3xl xs:text-4xl lg:max-w-[340px] leading-snug xs:leading-snug font-bold">Feel amazing about your oral health</p>
-                        </div>
-                        <p class="text-center lg:text-start lg:max-w-screen-xs text-[15px] font-medium text-slate-800/70 -mb-8">
-                            Experience personalized dental treatments designed to keep your smile healthy and beautiful. From routine cleanings to advanced procedures, we’re here to care for your oral health.
-                        </p>
-                    </div>
-
+                   <h1 class="text-head">OUR SERVICES</h1>
                     <!-- Services -->
-                    <div id="services-list" class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-5 child:transition-all child-hover:shadow-2xl mt-6 lg:mt-0 child-hover:shadow-slate-400/20 child-hover:border-gray-100 child:cursor-pointer">
+                    <div id="services-list" class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-5 child:transition-all child-hover:shadow-2xl lg:mt-0 child-hover:shadow-slate-400/20 child-hover:border-gray-100 child:cursor-pointer">
                         <!-- Service item 1 -->
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4">
-                            <img class="w-full rounded-[32px]" src="./assets/images/img1.jpg" alt="">
+                            <img class="w-full rounded-[32px]" src="./assets/images/website-img/General Dentistry.png" alt="">
                             <div class="text-center space-y-2">
                                 <h3 class="text-slate-800 font-bold uppercase">General Dentistry</h3>
-                                <p class="text-[15px] font-medium text-slate-800/50">Dental Cleaning / Oral Prophylaxis, Permanent Tooth Filling, Pit & Fissure Sealants and more.</p>
+                                <p class="text-sub"> Oral Prophylaxis or Cleaning, Tooth Filling, Fluoride Application, Pit & Fissure Sealants, and more.</p>
                             </div>
                         </div>
                         <!-- Service item 2 -->
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4">
-                            <img class="w-full rounded-[32px]" src="./assets/images/img2.jpg" alt="">
+                            <img class="w-full rounded-[32px]" src="./assets/images/website-img/Orthodontic Treatment.png" alt="">
                             <div class="text-center space-y-2">
-                                <h3 class="text-slate-800 font-bold uppercase">Dental Implants</h3>
-                                <p class="text-[15px] font-medium text-slate-800/50">Missing a tooth? Restore those gaps with teeth that feel and look like your own.</p>
+                                <h3 class="text-slate-800 font-bold uppercase">ORTHODONTIC TREATMENT</h3>
+                                <p class="text-sub">Align your your teeth with metal braces, ceramic braces, or clear aligners.</p>
                             </div>
                         </div>
                         <!-- Service item 3 -->
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4">
-                            <img class="w-full rounded-[32px]" src="./assets/images/img3.jpg" alt="">
+                            <img class="w-full rounded-[32px]" src="./assets/images/website-img/Whitening.png" alt="">
                             <div class="text-center space-y-2">
-                                <h3 class="text-slate-800 font-bold uppercase">Consultation</h3>
-                                <p class="text-[15px] font-medium text-slate-800/50">Don’t know where to start? Book a consultation with our specialists to know more about your oral health. We also offer diagnostics such as X-rays and 3D scans.</p>
+                                <h3 class="text-slate-800 font-bold uppercase">TEETH WHITENING</h3>
+                                <p class="text-sub"> Achieve pearly white teeth with our professional-grade whitening agents.</p>
                             </div>
                         </div>
 
                         <!-- Hidden service items -->
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4 hidden">
-                            <img class="w-full rounded-[32px]" src="./assets/images/img4.jpg" alt="">
+                            <img class="w-full rounded-[32px]" src="./assets/images/website-img/Tooth Extraction.png" alt="">
                             <div class="text-center space-y-2">
-                                <h3 class="text-slate-800 font-bold uppercase">DENTAL CROWN & VENEERS</h3>
-                                <p class="text-[15px] font-medium text-slate-800/50">A whole new you! We have solutions to give you a brand new smile with veneers, dental crowns or bridges.</p>
+                                <h3 class="text-slate-800 font-bold uppercase"> TOOTH EXTRACTION</h3>
+                                <p class="text-sub"> From removal of badly decayed teeth to removal of impacted wisdom teeth.</p>
                             </div>
                         </div>
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4 hidden">
-                            <img class="w-full rounded-[32px]" src="./assets/images/img5.jpg" alt="">
+                            <img class="w-full rounded-[32px]" src="./assets/images/website-img/Dentures.png" alt="">
                             <div class="text-center space-y-2">
-                                <h3 class="text-slate-800 font-bold uppercase">PEDIATRIC DENTISTRY</h3>
-                                <p class="text-[15px] font-medium text-slate-800/50">Looking for the best dentist for your child? Book an appointment with our pediatric dentists that will take care of your little one.</p>
+                                <h3 class="text-slate-800 font-bold uppercase">DENTURES</h3>
+                                <p class="text-sub"> Replace missing teeth to restore aesthetics and function.</p>
                             </div>
                         </div>
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4 hidden">
-                            <img class="w-full rounded-[32px]" src="./assets/images/img6.jpg" alt="">
+                            <img class="w-full rounded-[32px]" src="./assets/images/website-img/Crowns & Bridges.png" alt="">
                             <div class="text-center space-y-2">
-                                <h3 class="text-slate-800 font-bold uppercase">PAIN RELIEF</h3>
-                                <p class="text-[15px] font-medium text-slate-800/50">Can’t sleep due to a toothache? Contact us or come over to our clinic for an emergency treatment.</p>
+                                <h3 class="text-slate-800 font-bold uppercase">CROWNS & BRIDGES</h3>
+                                <p class="text-sub"> Strengthen damaged teeth or replace missing ones.</p>
+                            </div>
+                        </div>
+                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4 hidden">
+                            <img class="w-full rounded-[32px]" src="./assets/images/website-img/Root Canal Treatment.png" alt="">
+                            <div class="text-center space-y-2">
+                                <h3 class="text-slate-800 font-bold uppercase">ROOT CANAL TREATMENT</h3>
+                                <p class="text-sub"> Remove infection from inside a tooth to relieve pain.</p>
+                            </div>
+                        </div>
+                        <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4 hidden">
+                            <img class="w-full rounded-[32px]" src="./assets/images/website-img/sore.jpg" alt="">
+                            <div class="text-center space-y-2">
+                                <h3 class="text-slate-800 font-bold uppercase">CANKER SORE RELIEF</h3>
+                                <p class="text-sub"> Got a stubborn mouth sore that won’t go away? Visit our clinic for a quick fix.</p>
+                            </div>
+                        </div>
+                        <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4 hidden">
+                            <img class="w-full rounded-[32px]" src="./assets/images/website-img/Dental X-Ray.png" alt="">
+                            <div class="text-center space-y-2">
+                                <h3 class="text-slate-800 font-bold uppercase">X-RAYS</h3>
+                                <p class="text-sub"> Periapical and Panoramic x-rays are available here</p>
                             </div>
                         </div>
                     </div>
@@ -493,614 +546,126 @@
                                 <use href="#arrow-right-circle"></use>
                             </svg>
                         </button>
+                          <button id="bookAppointmentBtn" onclick="toggleModal(false)" class="btn-modal hidden"><i class="fa-solid fa-calendar-days"></i> Book an Appointment</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Emergency Section -->
-        <section class="section my-20">
-            <div class="container">
-                <div class="flex flex-col lg:flex-row items-center gap-x-20 gap-y-12">
-                    <!-- Emergency image -->
-                    <div>
-                        <img class="hidden lg:block" src="./assets/images/emergency-desktop.webp" alt="emergency-desktop">
-                        <img class="lg:hidden" src="./assets/images/emergency-mobile.webp" alt="emergency-mobile">
-                    </div>
-                    <!-- Emergency Contents -->
-                    <div class="flex flex-col gap-y-4 text-center lg:text-start">
-                        <!-- Title -->
-                        <h4 class="text-sm text-primary font-bold">Commitment to Excellence</h4>
-                        <!-- Subtitle -->
-                        <p class="text-slate-800 text-4xl leading-snug font-bold sm:max-w-screen-sm"> Comprehensive Dental Care for Your Perfect Smile</p>
-                        <!-- Description --> 
-                        <p class="max-w-lg lg:max-w-md mx-auto lg:mx-0 text-[15px] font-medium text-slate-800/70">We know that a perfect smile can make a lasting impression and this is exactly the reason why we’re here. Our patients can enjoy comprehensive dental services as we are committed to giving you the highest quality care.</p>
-                        <p class="max-w-lg lg:max-w-md mx-auto lg:mx-0 text-[15px] font-medium text-slate-800/70">We employ technologies and techniques to make your every visit worth it. As soon as you enter our clinic, we will ensure that you’ll remain comfortable and well taken care of. With us, you’ll have the peace of mind that you’ll only get the best care and treatment for your teeth!</p>
-                        <!-- Button Call to Action -->
-                       <button onclick="toggleModal(false)" class="h-12 w-44 bg-primary text-white text-sm font-bold rounded-xl transition-colors hover:bg-indigo-800 mx-auto lg:mx-0">
-                    Book an Appointment
-                </button>
-                        <!-- <a class="h-12 w-44 mx-auto bg-primary text-white text-sm font-bold text-center leading-[3rem] mt-6 lg:mt-8 lg:mx-0 rounded-xl transition-colors hover:bg-indigo-800" href="#">Book an Appointment</a> -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="section py-16">
-            <div class="container">
-                <div class="bg-[#DBDEFA] p-10 sm:p-12 md:px-16 md:py-[3.5rem] lg:px-32 lg:py-20 xl:py-24 xl:px-60 rounded-3xl">
-                    <!-- Feature info -->
-                    <div class="flex flex-col gap-y-4 mb-12 sm:mb-14 md:mb-16 lg:mb-20 text-center lg:text-start">
-                        <!-- Title -->
-                        <h4 class="text-sm text-primary font-bold">Features</h4>
-                        <!-- Subtitle -->
-                        <p class="text-slate-800 text-4xl leading-snug font-bold">Exceptional Care You Can Trust</p>
-                        <!-- Description -->
-                        <p class="text-[15px] font-medium text-slate-800/50">
-                            At Smile Restore Dental Center, we combine expertise, compassion, and advanced dental technology to give you the care you deserve. Discover what makes us the preferred choice for families and individuals.
-                        </p>
-                    </div>
-
-                    <!-- Features -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-14">
-                        <!-- Feature item -->
-                        <div class="flex items-center flex-col xs:flex-row sm:flex-col lg:flex-row gap-4">
-                            <div class="w-16 h-16 shrink-0">
-                                <img src="./assets/images/Safety-first.png" alt="Safety-first">
-                            </div>
-                            <div class="text-center xs:text-start sm:text-center lg:text-start">
-                                <p class="text-slate-800 font-bold mb-1">Your Safety Comes First</p>
-                                <p class="text-sm font-medium text-slate-800/50">
-                                    We maintain the highest standards of sterilization and hygiene to keep you safe and comfortable throughout your visit.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Feature item -->
-                        <div class="flex items-center flex-col xs:flex-row sm:flex-col lg:flex-row gap-4">
-                            <div class="w-16 h-16 shrink-0">
-                                <img src="./assets/images/Insurance-accepted.png" alt="Insurance-accepted">
-                            </div>
-                        <div class="text-center xs:text-start sm:text-center lg:text-start">
-                            <p class="text-slate-800 font-bold mb-1">Expert Team</p>
-                            <p class="text-sm font-medium text-slate-800/50">
-                                Our experienced dental team is dedicated to giving you expert care and personalized attention at every visit.
-                            </p>
-                        </div>
-
-                        </div>
-
-                        <!-- Feature item -->
-                        <div class="flex items-center flex-col xs:flex-row sm:flex-col lg:flex-row gap-4">
-                            <div class="w-16 h-16 shrink-0">
-                                <img src="./assets/images/Fullservice-dentistry.png" alt="Fullservice-dentistry">
-                            </div>
-                            <div class="text-center xs:text-start sm:text-center lg:text-start">
-                                <p class="text-slate-800 font-bold mb-1">Complete Dental Services</p>
-                                <p class="text-sm font-medium text-slate-800/50">
-                                    From preventive care to advanced cosmetic and restorative treatments, we provide everything you need for a healthier, brighter smile.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Feature item -->
-                        <div class="flex items-center flex-col xs:flex-row sm:flex-col lg:flex-row gap-4">
-                            <div class="w-16 h-16 shrink-0">
-                                <img src="./assets/images/No-judgment-ever.png" alt="No-judgment-ever">
-                            </div>
-                            <div class="text-center xs:text-start sm:text-center lg:text-start">
-                                <p class="text-slate-800 font-bold mb-1">Compassionate Dental Care</p>
-                                <p class="text-sm font-medium text-slate-800/50">
-                                    Whatever your dental history may be, we’re here to help with compassion, care, and understanding.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Expert in dental Section -->
-        <section class="section py-16">
-            <div class="container">
-                <div class="flex flex-col lg:flex-row items-center gap-x-20 gap-y-12">
-                    <!-- Emergency Contents -->
-                   <div class="flex flex-col gap-y-4 text-center lg:text-start">
-                        <!-- Title -->
-                        <h4 class="text-sm text-primary font-bold">About Smile Restore Dental Center</h4>
-                        <!-- Subtitle -->
-                        <p class="text-slate-800 text-4xl leading-snug font-bold sm:max-w-screen-sm">Professional Care, Friendly Smiles</p>
-                        <!-- Description -->
-                        <p class="max-w-lg lg:max-w-md mx-auto lg:mx-0 text-[15px] font-medium text-slate-800/70">
-                            At Smile Restore Dental Center, we are dedicated to providing exceptional dental care in a warm and welcoming environment. Our experienced dental professionals use advanced techniques to ensure you receive the highest quality treatments available.
-                            <br><br>
-                            From consultation to aftercare, we are here to guide you through every step of your dental journey. Whether you need routine check-ups, cosmetic treatments, or restorative procedures, our goal is to help you achieve a healthy, confident smile you’ll be proud to share.
-                            <br><br>
-                            Book your appointment today and experience the Smile Restore difference—where your smile always comes first.
-                        </p>
-
-                        <div class="flex flex-col gap-y-2 child:text-[#181945] child:text-[15px] child:font-medium mt-4">
-                            <p class="flex items-center gap-x-2">
-                                <svg class="w-5 h-5 text-primary">
-                                    <use href="#check-circle"></use>
-                                </svg>
-                                Experienced & caring dental professionals
-                            </p>
-                            <p class="flex items-center gap-x-2">
-                                <svg class="w-5 h-5 text-primary">
-                                    <use href="#check-circle"></use>
-                                </svg>
-                                Modern technology & advanced treatments
-                            </p>
-                            <p class="flex items-center gap-x-2">
-                                <svg class="w-5 h-5 text-primary">
-                                    <use href="#check-circle"></use>
-                                </svg>
-                                Affordable care with flexible treatment options
-                            </p>
-                        </div>
-                    </div>
-
-                     <!-- Emergency image -->
-                     <div class="flex order-first lg:order-last">
-                        <img class="hidden lg:block" src="./assets/images/expert-in-dental-desktop.webp" alt="expert-in-dental-desktop.png">
-                        <img class="lg:hidden" src="./assets/images/expert-in-dental-mobile.webp" alt="expert-in-dental-mobile.png">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TESTIMONIAL Section  -->
-        <!-- <section class="section py-16">
-            <div class="container">
-                <div class="bg-[#D9EBFA] rounded-3xl p-10 md:px-16 md:py-[3.5rem] lg:py-20 xl:py-24">
-                   
-                    <div class="flex flex-col items-center justify-center lg:flex-row lg:justify-between lg:items-center gap-y-4">
-                    
-                        <div class="text-center lg:text-start">
-                           
-                            <h3 class="text-sm text-primary font-bold mb-3">TESTIMONIAL</h3>
-                            
-                            <p class="text-slate-800 text-3xl xs:text-4xl lg:max-w-[400px] leading-snug xs:leading-snug font-bold">What people have said about us</p>
-                        </div>
-                      
-                        <p class="text-center lg:text-start lg:max-w-sm text-[15px] font-medium text-slate-800/70 -mb-8">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts</p>
-                    </div>
-
-                    <div class="swiper swiper-1">
-                        <div class="swiper-wrapper mt-28">
-                           
-                            <div class="swiper-slide relative bg-white rounded-3xl p-8">
-                                
-                                <div class="absolute mx-auto w-max left-0 right-0 top-0 translate-y-[-50%] border-8 rounded-full border-[#D9EBFA]">
-                                    <img src="./assets/images/user-avatar-1.webp" alt="user-avatar-1">
-                                </div>
-                                <div class="text-center mt-8">
-                                    
-                                    <p class="font-bold text-slate-800 mb-2">Robert Fox</p>
-                                    
-                                    <p class="text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts</p>
-                                    <div class="flex items-center justify-center mt-6">
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-gray-400/90">
-                                            <use href="#star"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                          
-                            <div class="swiper-slide relative bg-white rounded-3xl p-8">
-                               
-                                <div class="absolute mx-auto w-max left-0 right-0 top-0 translate-y-[-50%] border-8 rounded-full border-[#D9EBFA]">
-                                    <img src="./assets/images/user-avatar-2.webp" alt="user-avatar-2">
-                                </div>
-                                <div class="text-center mt-8">
-                                    
-                                    <p class="font-bold text-slate-800 mb-2">Albert Flores</p>
-                                   
-                                    <p class="text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts</p>
-                                    <div class="flex items-center justify-center mt-6">
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-gray-400/90">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-gray-400/90">
-                                            <use href="#star"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                          
-                            <div class="swiper-slide relative bg-white rounded-3xl p-8">
-                              
-                                <div class="absolute mx-auto w-max left-0 right-0 top-0 translate-y-[-50%] border-8 rounded-full border-[#D9EBFA]">
-                                    <img src="./assets/images/user-avatar-3.webp" alt="user-avatar-3">
-                                </div>
-                                <div class="text-center mt-8">
-                                  
-                                    <p class="font-bold text-slate-800 mb-2">Bessie Cooper</p>
-                                   
-                                    <p class="text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts</p>
-                                    <div class="flex items-center justify-center mt-6">
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="swiper-slide relative bg-white rounded-3xl p-8">
-                                <div class="absolute mx-auto w-max left-0 right-0 top-0 translate-y-[-50%] border-8 rounded-full border-[#D9EBFA]">
-                                    <img src="./assets/images/user-avatar-4.webp" alt="user-avatar-3">
-                                </div>
-                                <div class="text-center mt-8">
-                                    <p class="font-bold text-slate-800 mb-2">David Martin</p>                                 
-                                    <p class="text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts</p>
-                                    <div class="flex items-center justify-center mt-6">
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-orange-star">
-                                            <use href="#star"></use>
-                                        </svg>
-                                        <svg class="w-5 h-5 text-gray-400/90">
-                                            <use href="#star"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-       <!-- Blog Post Section -->
-<section class="section py-16">
-    <div class="container">
-        <!-- Blog Post info -->
-        <div class="text-center flex flex-col gap-y-4 mb-14 md:mb-16">
-            <!-- Title -->
-            <h4 class="text-sm text-primary font-bold">BLOG</h4>
-            <!-- Subtitle -->
-            <p class="text-slate-800 text-4xl leading-snug font-bold">Stay updated with our latest news</p>
-        </div>
-
-        <!-- Posts -->
-        <div class="swiper swiper-2">
-            <div class="swiper-wrapper">
-
-                <!-- Post 1 -->
-                <div class="swiper-slide flex flex-col gap-y-6 border rounded-[32px] p-4">
-                    <div class="relative">
-                        <a class="post-img block child:block" href="#">
-                            <img class="block w-full" src="./assets/images/blog-post-1.webp" alt="blog-post-1">
-                        </a>
-                        <div class="post-publish-date absolute left-5 top-5 sm:left-4 sm:top-4 w-14 h-14 bg-white p-2 flex flex-col rounded-xl text-center items-center justify-center">
-                            <span class="font-bold text-slate-800">23</span>
-                            <span class="text-sm font-bold text-slate-800/70 -mt-1">Jan</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-y-2 px-1">
-                        <a href="#" class="text-xs text-primary font-bold">TECHNOLOGY</a>
-                        <h4 class="font-bold text-slate-800"><a href="#">New Technology Make for Dental Operation</a></h4>
-                        <p class="line-clamp-2 text-[15px] font-medium text-slate-800/70">
-                            Discover how cutting-edge dental technology is transforming procedures, making treatments faster, more comfortable, and highly effective.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Post 2 -->
-                <div class="swiper-slide flex flex-col gap-y-6 border rounded-[32px] p-4">
-                    <div class="relative">
-                        <a class="post-img block child:block" href="#">
-                            <img class="block w-full" src="./assets/images/blog-post-2.webp" alt="blog-post-2">
-                        </a>
-                        <div class="post-publish-date absolute left-5 top-5 sm:left-4 sm:top-4 w-14 h-14 bg-white p-2 flex flex-col rounded-xl text-center items-center justify-center">
-                            <span class="font-bold text-slate-800">23</span>
-                            <span class="text-sm font-bold text-slate-800/70 -mt-1">Jan</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-y-2 px-1">
-                        <a href="#" class="text-xs text-primary font-bold">DENTAL</a>
-                        <h4 class="font-bold text-slate-800"><a href="#">Regular Dental Care Makes Your Smile Brighter</a></h4>
-                        <p class="line-clamp-2 text-[15px] font-medium text-slate-800/70">
-                            Learn the importance of routine check-ups and cleanings in keeping your teeth strong, bright, and free from dental problems.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Post 3 -->
-                <div class="swiper-slide flex flex-col gap-y-6 border rounded-[32px] p-4">
-                    <div class="relative">
-                        <a class="post-img block child:block" href="#">
-                            <img class="block w-full" src="./assets/images/blog-post-3.webp" alt="blog-post-3">
-                        </a>
-                        <div class="post-publish-date absolute left-5 top-5 sm:left-4 sm:top-4 w-14 h-14 bg-white p-2 flex flex-col rounded-xl text-center items-center justify-center">
-                            <span class="font-bold text-slate-800">23</span>
-                            <span class="text-sm font-bold text-slate-800/70 -mt-1">Jan</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-y-2 px-1">
-                        <a href="#" class="text-xs text-primary font-bold">HYGIENE</a>
-                        <h4 class="font-bold text-slate-800"><a href="#">Dental Hygiene for All Ages to Make You Smile</a></h4>
-                        <p class="line-clamp-2 text-[15px] font-medium text-slate-800/70">
-                            Good oral hygiene starts at any age. Explore tips and techniques to maintain fresh breath, healthy gums, and cavity-free teeth.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Post 4 -->
-                <div class="swiper-slide flex flex-col gap-y-6 border rounded-[32px] p-4">
-                    <div class="relative">
-                        <a class="post-img block child:block rounded-[32px] sm:rounded-3xl overflow-hidden" href="#">
-                            <img class="block w-full" src="./assets/images/blog-post-4.webp" alt="blog-post-4">
-                        </a>
-                        <div class="post-publish-date absolute left-5 top-5 sm:left-4 sm:top-4 w-14 h-14 bg-white p-2 flex flex-col rounded-xl text-center items-center justify-center">
-                            <span class="font-bold text-slate-800">23</span>
-                            <span class="text-sm font-bold text-slate-800/70 -mt-1">Jan</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-y-2 px-1">
-                        <a href="#" class="text-xs text-primary font-bold">DENTAL</a>
-                        <h4 class="font-bold text-slate-800"><a href="#">Home and Natural Remedies for Toothache</a></h4>
-                        <p class="line-clamp-2 text-[15px] font-medium text-slate-800/70">
-                            Toothache at home? Here are safe and effective remedies you can try before visiting your dentist for a professional check-up.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Post 5 -->
-                <div class="swiper-slide flex flex-col gap-y-6 border rounded-[32px] p-4">
-                    <div class="relative">
-                        <a class="post-img block child:block rounded-[32px] sm:rounded-3xl overflow-hidden" href="#">
-                            <img class="block w-full" src="./assets/images/blog-post-5.webp" alt="blog-post-5">
-                        </a>
-                        <div class="post-publish-date absolute left-5 top-5 sm:left-4 sm:top-4 w-14 h-14 bg-white p-2 flex flex-col rounded-xl text-center items-center justify-center">
-                            <span class="font-bold text-slate-800">23</span>
-                            <span class="text-sm font-bold text-slate-800/70 -mt-1">Jan</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-y-2 px-1">
-                        <a href="#" class="text-xs text-primary font-bold">ACCESSORIES</a>
-                        <h4 class="font-bold text-slate-800"><a href="#">How to Choose the Right Toothbrush for You</a></h4>
-                        <p class="line-clamp-2 text-[15px] font-medium text-slate-800/70">
-                            Not all toothbrushes are the same. Find out which type of brush suits your dental needs for optimal oral health.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
-</section>
+       
 
         <!-- Contact us Section -->
-        <section class="section py-16">
-            <div class="container">
-                <div class="flex flex-col lg:flex-row gap-y-6 gap-x-20">
-                    <!-- Map image -->
-                    <div class="relative lg:w-1/2">
-                        <img class="block w-full h-[440px] xs:h-[500px] lg:h-[610px] xl:h-[680px] object-cover rounded-3xl" src="./assets/images/map-image.webp" alt="map-image">
-                        <!-- Absolute Address -->
-                        <div class="absolute bg-white p-4 bottom-8 left-8 right-8 rounded-3xl flex gap-x-6 items-center">
-                            <!-- icon -->
-                            <img class="block w-16 h-16" src="./assets/images/home-icon.png" alt="home-icon">
-                            <!-- Address -->
-                            <div>
-                                <p class="text-xs text-primary font-bold mb-1">ADDRESS</p>
-                                <p class="font-bold text-slate-800 max-w-[260px]">Unit 205 A, No. 65 - 67 V. Luna Road corner Kalayaan  Avenue, Barangay Pinyahan, Quezon City</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/2 bg-gray-100 px-4 pt-10 pb-4 rounded-3xl lg:bg-transparent lg:p-0 lg:rounded-none">
-                        <!-- Contact us info -->
-                        <div class="flex flex-col gap-y-4 text-center lg:text-start">
-                            <h4 class="text-sm text-primary font-bold">Contact Smile Restore Dental Center</h4>
-                            <!-- Subtitle -->
-                            <p class="text-slate-800 text-4xl leading-snug font-bold lg:max-w-screen-sm">Bringing Back Your Best Smile</p>
-                            <!-- Description -->
-                            <p class="mx-auto lg:mx-0 text-[15px] font-medium text-slate-800/70">
-                                We’re here to provide you with personalized dental care that restores confidence and comfort to your smile. Reach out to Smile Restore Dental Center today—we’d love to hear from you!
-                            </p>
-                        </div>
+       <section class="section py-16">
+  <div class="container">
+    <div class="flex flex-col lg:flex-row gap-y-6 gap-x-20">
+      <!-- Map image -->
+      <div class="relative lg:w-1/2">
+        <img class="block w-full h-[440px] xs:h-[500px] lg:h-[610px] xl:h-[680px] object-cover rounded-3xl" src="./assets/images/map-image.webp" alt="map-image">
 
+        <!-- Absolute Address -->
+        <div class="absolute bg-white p-4 bottom-8 left-8 right-8 rounded-3xl flex gap-x-6 items-center shadow-lg">
+          <i class="fa-solid fa-location-dot text-primary text-4xl"></i>
+          <div>
+            <p class="text-xs text-primary font-bold mb-1">Clinic Address</p>
+            <p class="font-bold text-slate-800 max-w-[260px]">Unit 205 A, No. 65 - 67 V. Luna Road corner Kalayaan Avenue, Barangay Pinyahan, Quezon City</p>
+          </div>
+        </div>
+      </div>
 
-                        <!-- Contact us form -->
-                        <form class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-7 mt-10 xl:mt-16">
-                            <!-- name input -->
-                            <div class="flex flex-col gap-y-2 relative">
-                                <label class="font-bold text-[13px] text-slate-600/90" for="name">NAME</label>
-                                <input class="form-input" id="name" type="text" placeholder="Enter your name..." required>
-                                <svg class="w-6 h-6 absolute bottom-4 left-4 text-slate-400">
-                                    <use href="#user"></use>
-                                </svg>
-                            </div>
-                            <!-- email input -->
-                            <div class="flex flex-col gap-y-2 relative">
-                                <label class="font-bold text-[13px] text-slate-600/90" for="email">EMAIL ADDRESS</label>
-                                <input class="form-input" id="email" type="email" placeholder="Your email address..." required>
-                                <svg class="w-6 h-6 absolute bottom-4 left-4 text-slate-400">
-                                    <use href="#envelope"></use>
-                                </svg>
-                            </div>
-                            <!-- messages input -->
-                            <div class="flex flex-col gap-y-2 sm:col-span-2 relative">
-                                <label class="font-bold text-[13px] text-slate-600/90" for="message">MESSAGES</label>
-                                <textarea class="form-input min-h-[234px] max-h-[234px] lg:min-h-[116px] lg:max-h-[116px] xl:min-h-[234px] xl:max-h-[234px]" id="message" placeholder="Enter your messages..." required></textarea>
-                                <svg class="w-6 h-6 absolute top-[42px] left-4 text-slate-400">
-                                    <use href="#pencil-square"></use>
-                                </svg>
-                            </div>
-                            <!-- Form submit button -->
-                            <div class="sm:col-span-2 flex justify-end lg:justify-end">
-                                <button type="submit" id="sendMessage" name="sendMessage" class="h-12 w-full sm:w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800">
-                                    Send Message
-                                </button>
-                            </div>
+      <!-- Contact Info -->
+      <div class="lg:w-1/2">
+        <p class="text-head uppercase">Location and Contact Details</p>
 
-                        </form>
-                    </div>
-                </div>
+        <div class="flex flex-col gap-y-6 mt-6 text-slate-800">
+          <!-- Email -->
+          <div class="flex items-center gap-x-4">
+            <i class="fa-solid fa-envelope text-3xl text-primary"></i>
+            <div>
+              <p class="text-[14px] font-medium text-slate-500 mb-1">Email</p>
+              <p class="font-bold">smilerestoredental@gmail.com</p>
             </div>
-        </section>
+          </div>
+
+          <!-- Phone -->
+          <div class="flex items-center gap-x-4">
+            <i class="fa-solid fa-phone text-3xl text-primary"></i>
+            <div>
+              <p class="text-[14px] font-medium text-slate-500 mb-1">Phone Number</p>
+              <p class="font-bold">(0906) 575 4924</p>
+            </div>
+          </div>
+
+          <!-- Clinic Hours -->
+          <div class="flex items-center gap-x-4">
+            <i class="fa-solid fa-clock text-3xl text-primary"></i>
+            <div>
+              <p class="text-[14px] font-medium text-slate-500 mb-1">Clinic Hours</p>
+              <p class="font-bold">Monday - Saturday</p>
+              <p class="font-bold">10:00 AM - 05:00 PM</p>
+            </div>
+          </div>
+
+         
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
     </main>
     <!-- Footer -->
-    <footer class="bg-[#041434] mt-10">
-        <div class="container">  
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-10 xl:gap-x-20 text-white py-16">
-                <!-- About me in Footer -->
-                <div class="sm:col-span-2 lg:col-span-1">
-                    <!-- Logo -->
-                     <!-- <h1>Logo</h1> -->
-                     <img src="./assets/images/logo/SRDC Logo B 1 (PRIMARY LOGO).png" alt="Site-Logo" class="w-40 md:w-48 lg:w-56 h-auto">
-                    <!-- <img src="./assets/images/logo/logo.png" alt="Site-Logo" class="img-logo1"> -->
-                    <!-- <img src="./assets/images/logo-footer.svg" alt="logo-footer"> -->
-                    <!-- Description -->
-                    <p class="text-[15px] text-white/70  mt-4">Put your best smile forward with Smile Restore Dental Center. We offer complete dental care for kids and adults, with personalized treatments from our experienced team.</p>
-                    <!-- Social in footer -->
-                    <div class="mt-8">
-                        <p class="text-[13px] font-medium text-white/70 mb-4">FALLOW US ON</p>
-                        <!-- Socials -->
-                        <div class="flex items-center gap-x-4 child:transition-colors child:bg-white/90 child-hover:bg-white child:p-2 child:rounded-lg">
-                            <!-- Social item -->
-                            <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1e293b" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
-                            </a>
-                            <!-- Social item -->
-                            <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1e293b" d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z"/></svg>
-                            </a>
-                             <!-- Social item -->
-                             <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1e293b" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Quick Access in Footer -->
-                <div>
-                    <!-- Title -->
-                    <p class="text-[13px] font-medium text-white/70 mb-6">QUICK LINKS</p>
-                    <!-- Quick Access List -->
-                    <ul class="flex flex-col gap-y-4 text-[15px]">
-                        <!-- Quick Access item -->
-                        <li>
-                            <a class="quick-access-item" href="#">About Us</a>
-                        </li>
-                        <!-- Quick Access item -->
-                        <li>
-                            <a class="quick-access-item" href="#">Dental Services</a>
-                        </li>
-                        <!-- Quick Access item -->
-                        <li>
-                            <a class="quick-access-item" href="#">Location</a>
-                        </li>
-                        <!-- Quick Access item -->
-                        <li>
-                            <a class="quick-access-item" href="#">Blog</a>
-                        </li>
-                        <!-- Quick Access item -->
-                        <li>
-                            <a class="quick-access-item" href="#">FAQs</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Contact us in Footer -->
-                <div>
-                    <!-- Title -->
-                    <p class="text-[13px] font-medium text-white/70">CONTACT & INFORMATION</p>
-                    <!-- Contact info List -->
-                    <div class="flex flex-col gap-y-4 mt-6">
-                          <!-- Contact info item -->
-                        <div class="flex items-center gap-x-4">
-                            <!-- info icon -->
-                            <img class="h-14 w-14" src="./assets/images/email-white-icon.png" alt="phone-icon">
-                            <!-- info contents -->
-                            <div>
-                                <p class="text-[14px] font-medium text-white/70 mb-1">Email</p>
-                                <p class="font-bold">smilerestoredental@gmail.com</p>
-                            </div>
-                        </div>
-                        <!-- Contact info item -->
-                        <div class="flex items-center gap-x-4">
-                            <!-- info icon -->
-                            <img class="h-14 w-14" src="./assets/images/phone-white-icon.png" alt="phone-icon">
-                            <!-- info contents -->
-                            <div>
-                                <p class="text-[14px] font-medium text-white/70 mb-1">Phone Number</p>
-                                <p class="font-bold">(0906) 575 4924</p>
-                            </div>
-                        </div>
-                        <!-- Contact info item -->
-                        <div class="flex items-center gap-x-4">
-                            <!-- info icon -->
-                            <img class="h-14 w-14" src="./assets/images/clock-icon.png" alt="clock-icon">
-                            <!-- info contents -->
-                            <div>
-                                <p class="text-[14px] font-medium text-white/70 mb-1">Open Hours</p>
-                                <p class="font-bold">10:00 AM - 05:00 PM</p>
-                            </div>
-                        </div>
-                        <!-- Contact info item -->
-                        <div class="flex items-center gap-x-4">
-                            <!-- info icon -->
-                            <img class="h-14 w-14" src="./assets/images/location-icon.png" alt="location-icon">
-                            <!-- info contents -->
-                            <div>
-                                <p class="text-[14px] font-medium text-white/70 mb-1">Clinic Address</p>
-                                <p class="font-bold">Unit 205 A, No. 65 - 67 V. Luna Road corner Kalayaan  Avenue, Barangay Pinyahan, Quezon City</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             <!-- Copyright Section -->
-        <div class="text-center text-white/70 text-[13px] py-8">
-            &copy; 2025 Smile Restore Dental Clinic. All Rights Reserved.
+    <footer class="bg-[#003A70] mt-10 text-white">
+  <div class="container">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-10 xl:gap-x-20 py-16">
+
+      <!-- About Section -->
+      <div class="sm:col-span-2 lg:col-span-1">
+        <img src="./assets/images/logo/SRDC Logo B 1 (PRIMARY LOGO).png" alt="Site Logo" class="w-40 md:w-48 lg:w-56 h-auto mb-4">
+
+        <p class="text-[15px] text-white/70">
+          Put your best smile forward with Smile Restore Dental Center. We offer complete dental care for kids and adults, with personalized treatments from our experienced team.
+        </p>
+
+        <!-- Social Media -->
+        <div class="mt-8">
+          <p class="text-[13px] font-medium text-white/70 mb-4">FOLLOW US ON</p>
+          <div class="flex gap-x-4">
+            <a href="#" class="bg-white/90 hover:bg-white text-[#003A70] p-2 rounded-lg transition-colors">
+              <i class="fa-brands fa-instagram text-lg"></i>
+            </a>
+            <a href="#" class="bg-white/90 hover:bg-white text-[#003A70] p-2 rounded-lg transition-colors">
+              <i class="fa-brands fa-linkedin-in text-lg"></i>
+            </a>
+            <a href="#" class="bg-white/90 hover:bg-white text-[#003A70] p-2 rounded-lg transition-colors">
+              <i class="fa-brands fa-facebook-f text-lg"></i>
+            </a>
+          </div>
         </div>
-        </div>
-    </footer>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <p class="text-[13px] font-medium text-white/70 mb-6">QUICK LINKS</p>
+        <ul class="flex flex-col gap-y-4 text-[15px]">
+          <li><a class="hover:underline" href="#">About Us</a></li>
+          <li><a class="hover:underline" href="#">Dental Services</a></li>
+          <li><a class="hover:underline" href="#">Location</a></li>
+          <li><a class="hover:underline" href="#">Blog</a></li>
+          <li><a class="hover:underline" href="#">FAQs</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center text-white/70 text-[13px] py-8 border-t border-white/20">
+      &copy; 2025 Smile Restore Dental Clinic. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./scripts/formValidator.js"></script>
