@@ -89,19 +89,22 @@
                 <nav class="hidden lg:block">
                     <ul class="flex gap-x-10 xl:gap-x-12 text-slate-800 text-sm font-bold child:transition-colors child:delay-75 child-hover:text-primary">
                         <li>
-                            <a href="#main">Home</a>
+                            <a href="#" onclick="document.getElementById('home').scrollIntoView({ behavior: 'smooth' }); return false;" class="text-sm uppercase tracking-wide font-semibold">Home</a>
                         </li>
                         <li>
-                            <a href="#">About Us</a>
+                            <a href="#" onclick="document.getElementById('aboutUs').scrollIntoView({ behavior: 'smooth' }); return false;" class="text-sm uppercase tracking-wide font-semibold">About Us</a>
                         </li>
                         <li>
-                            <a href="#">Services</a>
+                            <a href="#" onclick="document.getElementById('service').scrollIntoView({ behavior: 'smooth' }); return false;" class="text-sm uppercase tracking-wide font-semibold">Services</a>
                         </li>
                         <li>
-                            <a href="#">Location & Contact Details</a>
+                           <a href="#" onclick="document.getElementById('contactUs').scrollIntoView({ behavior: 'smooth' }); return false;" class="text-sm uppercase tracking-wide font-semibold">
+                            Location & Contact Details
+                            </a>
+
                         </li>
                         <li>                          
-                          <a href="#" onclick="window.location.href='faqs.html'; return false;">
+                          <a href="#" onclick="window.location.href='faqs.html'; return false;"  class="text-sm uppercase tracking-wide font-semibold">
                                 FAQs
                             </a>
                         </li>
@@ -143,55 +146,46 @@
                         <!-- Mobile menu nav -->
                         <nav class="p-4 grow">
                             <!-- menu List -->
-                            <ul class="flex flex-col gap-y-5 text-slate-800 text-sm font-medium child:transition-colors child:delay-75 child-hover:text-primary">
-                                <!-- menu item -->
-                                <li>
-                                    <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">
-                                            <use href="#home"></use>
-                                        </svg>
-                                        Home
-                                    </a>
-                                </li>
-                                <!-- menu item -->
-                                <li>
-                                    <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">                                                                                     
-                                            <use href="#users"></use>
-                                        </svg>
-                                        About Us
-                                    </a>
-                                </li>
-                                <!-- menu item -->
-                                <li>
-                                    <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">   
-                                             <use href="#gear"></use>                                     
-                                        </svg>
-                                       Services
-                                    </a>
-                                </li>
-                                <!-- menu item -->
-                                <li>
-                                    <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">
-                                             <use href="#location"></use>                                          
-                                        </svg>
-                                        Location & Contact Details
-                                    </a>
-                                </li>
-                                <!-- menu item -->
-                                <li>
-                                 
-                                  <a class="flex items-center gap-x-1" href="#" onclick="window.location.href='faqs.html'; return false;">
-                                        <i class="fa-solid fa-circle-question"></i>
-                                        FAQs
-                                    </a>
+                         <ul class="flex flex-col gap-y-5 text-slate-800 text-sm font-medium child:transition-colors child:delay-75 child-hover:text-primary">
+                            <!-- Home -->
+                            <li>
+                                <a class="flex items-center gap-x-2" href="#" onclick="document.getElementById('home').scrollIntoView({ behavior: 'smooth' }); return false;">
+                                <i class="fa-solid fa-house w-5 h-5"></i>
+                                Home
+                                </a>
+                            </li>
 
+                            <!-- About Us -->
+                            <li>
+                                <a class="flex items-center gap-x-2" href="#" onclick="document.getElementById('aboutUs').scrollIntoView({ behavior: 'smooth' }); return false;">
+                                <i class="fa-solid fa-users w-5 h-5"></i>
+                                About Us
+                                </a>
+                            </li>
 
-                                </li>
-                                <!-- menu item -->
-                               
+                            <!-- Services -->
+                            <li>
+                                <a class="flex items-center gap-x-2" href="#" onclick="document.getElementById('service').scrollIntoView({ behavior: 'smooth' }); return false;">
+                                <i class="fa-solid fa-gear w-5 h-5"></i>
+                                Services
+                                </a>
+                            </li>
+
+                            <!-- Contact -->
+                            <li>
+                                <a class="flex items-center gap-x-2" href="#" onclick="document.getElementById('contactUs').scrollIntoView({ behavior: 'smooth' }); return false;">
+                                <i class="fa-solid fa-location-dot w-5 h-5"></i>
+                                Location & Contact Details
+                                </a>
+                            </li>
+
+                            <!-- FAQs -->
+                            <li>
+                                <a class="flex items-center gap-x-2" href="#" onclick="window.location.href='faqs.html'; return false;">
+                                <i class="fa-solid fa-circle-question w-5 h-5"></i>
+                                FAQs
+                                </a>
+                            </li>
                             </ul>
                         </nav>
                         <!-- Button -->
@@ -205,8 +199,8 @@
         </div>
     </header>
     <!-- Main -->
-    <main id="main">
-    <section class="mb-12 lg:mb-16 xl:mb-24">
+    <main >
+    <section class="mb-12 lg:mb-16 xl:mb-24" id="home" name="home">
     <div class="container">
         <div class="bg-top-main rounded-3xl flex flex-col  lg:flex-row overflow-hidden lg:min-h-[500px] xl:min-h-[620px] 2xl:min-h-[760px] ">
 
@@ -383,7 +377,6 @@
                                 class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary">
                                 <option value="" disabled selected>Select an option</option>
                                 <option value="1">Facebook</option>
-                                <option value="2">Marketing Campaign</option>
                                 <option value="3">Patient Referral</option>
                                 <option value="5">Instagram</option>
                                 <option value="6">TikTok</option>
@@ -405,7 +398,7 @@
     </div>
 </div>
 <!-- About Us Section -->
-<section class="section mb-32">
+<section class="section mb-32" id="aboutUs">
   <div class="container">
     <div class="flex flex-col gap-14 lg:gap-y-16 xl:gap-y-20 text-center">
 
@@ -461,7 +454,7 @@
 </section>
 
 
-        <section class="section mb-32">
+        <section class="section " id="service">
             <div class="container">
                 <div class="flex flex-col gap-14 lg:gap-y-16 xl:gap-y-20 text-center">
                     <!-- Services info contents -->
@@ -552,7 +545,7 @@
             </div>
         </section>
          <!-- Contact Us Section -->
-<section class="section py-16">
+<section class="section py-16" id="contactUs">
   <div class="container">
     <div class="flex flex-col lg:flex-row gap-y-10 gap-x-20">
       
@@ -566,7 +559,7 @@
 
         <!-- Address Box -->
         <div class="absolute bg-white p-5 bottom-8 left-8 right-8 rounded-3xl flex gap-4 items-start shadow-xl">
-          <div class="p-2 border border-primary rounded-full hover:bg-primary/10 transition">
+          <div class="icons hover:bg-primary/10 transition">
             <i class="fa-solid fa-location-dot text-primary text-lg" aria-hidden="true"></i>
           </div>
           <div>

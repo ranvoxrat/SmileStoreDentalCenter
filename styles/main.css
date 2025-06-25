@@ -1728,7 +1728,9 @@ body{
   width: 20px;
   height: 20px;
   border-radius: 4px;
+  color: #ffffff; 
   border: 2px solid rgb(3, 63, 133);
+  background-color:rgb(3, 63, 133); 
   padding: 1.4rem;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -1736,17 +1738,10 @@ body{
 
 .icons > i {
   font-size: 1.5rem;
-  color: rgb(3, 63, 133);
+  color: rgb(255, 255, 255);
   transition: color 0.3s ease;
 }
 
-.icons:hover {
-  background-color:rgb(3, 63, 133); 
-}
-
-.icons:hover > i {
-  color: #ffffff; 
-}
 .icons-social {
   display: inline-flex;
   justify-content: center;

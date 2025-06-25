@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -87,21 +87,24 @@
                 <img src="./assets/images/logo/SRDC Logo B 1 (PRIMARY LOGO).png" alt="Site-Logo" class="img-logo">
                 <!-- Header Menu -->
                 <nav class="hidden lg:block">
-                    <ul class="flex gap-x-10 xl:gap-x-12 text-slate-800 text-sm font-bold child:transition-colors child:delay-75 child-hover:text-primary">
+                      <ul class="flex gap-x-10 xl:gap-x-12 text-slate-800 text-sm font-bold child:transition-colors child:delay-75 child-hover:text-primary">
                         <li>
-                            <a href="#main">Home</a>
+                            <a href="#" onclick="window.location.href='index.html'; return false;" class="text-sm uppercase tracking-wide font-semibold">Home</a>
                         </li>
                         <li>
-                            <a href="#">About Us</a>
+                            <a href="#" onclick="document.getElementById('aboutUs').scrollIntoView({ behavior: 'smooth' }); return false;" class="text-sm uppercase tracking-wide font-semibold">About Us</a>
                         </li>
                         <li>
-                            <a href="#">Services</a>
+                            <a href="#" onclick="document.getElementById('service').scrollIntoView({ behavior: 'smooth' }); return false;" class="text-sm uppercase tracking-wide font-semibold">Services</a>
                         </li>
                         <li>
-                            <a href="#">Location & Contact Details</a>
+                           <a href="#" onclick="document.getElementById('contactUs').scrollIntoView({ behavior: 'smooth' }); return false;" class="text-sm uppercase tracking-wide font-semibold">
+                            Location & Contact Details
+                            </a>
+
                         </li>
                         <li>                          
-                          <a href="#" onclick="window.location.href='faqs.html'; return false;">
+                          <a href="#" onclick="window.location.href='faqs.html'; return false;"  class="text-sm uppercase tracking-wide font-semibold">
                                 FAQs
                             </a>
                         </li>
@@ -173,10 +176,10 @@
                                 </li>
                                 <!-- menu item -->
                                 <li>
-                                    <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">
+                                    <a class="flex items-center gap-x-1" href="#contactUs">
+                                        <!-- <svg class="w-5 h-5">
                                              <use href="#location"></use>                                          
-                                        </svg>
+                                        </svg> -->
                                         Location & Contact Details
                                     </a>
                                 </li>
@@ -491,7 +494,7 @@
 
         
          <!-- Contact Us Section -->
-<section class="section py-16">
+<section class="section py-16 scroll-mt-24" id="contactUs">
   <div class="container">
     <div class="flex flex-col lg:flex-row gap-y-10 gap-x-20">
       
@@ -509,7 +512,7 @@
             <i class="fa-solid fa-location-dot text-primary text-lg" aria-hidden="true"></i>
           </div>
           <div>
-            <p class="text-xs text-primary font-bold mb-1">Clinic Address</p>
+            <p class="text-head text-xl uppercase tracking-wide font-semibold mb-1">Clinic Address</p>
             <p class="font-bold text-slate-800 text-sm leading-relaxed max-w-[260px]">
               Unit 205 A, No. 65 - 67 V. Luna Road corner Kalayaan Avenue, Barangay Pinyahan, Quezon City
             </p>
@@ -519,7 +522,7 @@
 
       <!-- Contact Details -->
       <div class="lg:w-1/2">
-        <p class="text-head text-xl uppercase tracking-wide text-primary font-semibold">Location and Contact Details</p>
+        <p class="text-head text-xl uppercase tracking-wide font-semibold">Location and Contact Details</p>
 
         <div class="flex flex-col gap-8 mt-6 text-slate-800">
           
@@ -559,8 +562,8 @@
 
           <!-- Social Links -->
           <div class="mt-4">
-            <p class="text-sm font-medium text-slate-500 mb-3">Follow Us On</p>
-            <div class="flex gap-3">
+            <p class="text-head text-xl uppercase tracking-wide font-semibold">Follow Us On</p>
+            <div class="flex gap-3 mt-4">
               <a href="#" class="icons-social" aria-label="Instagram">
                 <i class="fa-brands fa-instagram text-lg"></i>
               </a>
@@ -577,11 +580,6 @@
     </div>
   </div>
 </section>
-
-       
-
-  
-
     </main>
     <!-- Footer -->
 <footer class="bg-[#003A70] mt-10 text-white">
