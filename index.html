@@ -183,7 +183,7 @@
                                 <!-- menu item -->
                                 <li>
                                  
-                                  <a class="flex items-center gap-x-1" href="#" onclick="window.open('faqs.html', '_blank')">
+                                  <a class="flex items-center gap-x-1" href="#" onclick="window.location.href='faqs.html'; return false;">
                                         <i class="fa-solid fa-circle-question"></i>
                                         FAQs
                                     </a>
@@ -551,116 +551,99 @@
                 </div>
             </div>
         </section>
-
-       
-
-        <!-- Contact us Section -->
-       <section class="section py-16">
+         <!-- Contact Us Section -->
+<section class="section py-16">
   <div class="container">
-    <div class="flex flex-col lg:flex-row gap-y-6 gap-x-20">
-      <!-- Map image -->
+    <div class="flex flex-col lg:flex-row gap-y-10 gap-x-20">
+      
+      <!-- Map image with address -->
       <div class="relative lg:w-1/2">
-        <img class="block w-full h-[440px] xs:h-[500px] lg:h-[610px] xl:h-[680px] object-cover rounded-3xl" src="./assets/images/map-image.webp" alt="map-image">
+        <img 
+          src="./assets/images/map-image.webp" 
+          alt="Map showing clinic location" 
+          class="w-full h-[440px] xs:h-[500px] lg:h-[610px] xl:h-[680px] object-cover rounded-3xl"
+        >
 
-        <!-- Absolute Address -->
-        <div class="absolute bg-white p-4 bottom-8 left-8 right-8 rounded-3xl flex gap-x-6 items-center shadow-lg">
-          <i class="fa-solid fa-location-dot text-primary text-4xl"></i>
+        <!-- Address Box -->
+        <div class="absolute bg-white p-5 bottom-8 left-8 right-8 rounded-3xl flex gap-4 items-start shadow-xl">
+          <div class="p-2 border border-primary rounded-full hover:bg-primary/10 transition">
+            <i class="fa-solid fa-location-dot text-primary text-lg" aria-hidden="true"></i>
+          </div>
           <div>
             <p class="text-xs text-primary font-bold mb-1">Clinic Address</p>
-            <p class="font-bold text-slate-800 max-w-[260px]">Unit 205 A, No. 65 - 67 V. Luna Road corner Kalayaan Avenue, Barangay Pinyahan, Quezon City</p>
+            <p class="font-bold text-slate-800 text-sm leading-relaxed max-w-[260px]">
+              Unit 205 A, No. 65 - 67 V. Luna Road corner Kalayaan Avenue, Barangay Pinyahan, Quezon City
+            </p>
           </div>
         </div>
       </div>
 
-      <!-- Contact Info -->
+      <!-- Contact Details -->
       <div class="lg:w-1/2">
-        <p class="text-head uppercase">Location and Contact Details</p>
+        <p class="text-head text-xl uppercase tracking-wide text-primary font-semibold">Location and Contact Details</p>
 
-        <div class="flex flex-col gap-y-6 mt-6 text-slate-800">
+        <div class="flex flex-col gap-8 mt-6 text-slate-800">
+          
           <!-- Email -->
-          <div class="flex items-center gap-x-4">
-            <i class="fa-solid fa-envelope text-3xl text-primary"></i>
+          <div class="flex items-start gap-4">
+          <div class="icons">
+              <i class="fa-solid fa-envelope text" aria-hidden="true"></i>
+            </div>
             <div>
-              <p class="text-[14px] font-medium text-slate-500 mb-1">Email</p>
-              <p class="font-bold">smilerestoredental@gmail.com</p>
+              <p class="text-sm text-slate-500 mb-1">Email</p>
+              <p class="font-semibold text-base">smilerestoredental@gmail.com</p>
             </div>
           </div>
 
           <!-- Phone -->
-          <div class="flex items-center gap-x-4">
-            <i class="fa-solid fa-phone text-3xl text-primary"></i>
+          <div class="flex items-start gap-4">
+            <div class="icons">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            </div>
             <div>
-              <p class="text-[14px] font-medium text-slate-500 mb-1">Phone Number</p>
-              <p class="font-bold">(0906) 575 4924</p>
+              <p class="text-sm text-slate-500 mb-1">Phone Number</p>
+              <p class="font-semibold text-base">(0906) 575 4924</p>
             </div>
           </div>
 
           <!-- Clinic Hours -->
-          <div class="flex items-center gap-x-4">
-            <i class="fa-solid fa-clock text-3xl text-primary"></i>
+          <div class="flex items-start gap-4">
+            <div class="icons">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+            </div>
             <div>
-              <p class="text-[14px] font-medium text-slate-500 mb-1">Clinic Hours</p>
-              <p class="font-bold">Monday - Saturday</p>
-              <p class="font-bold">10:00 AM - 05:00 PM</p>
+              <p class="text-sm text-slate-500 mb-1">Clinic Hours</p>
+              <p class="font-semibold text-base">Monday - Saturday</p>
+              <p class="font-semibold text-base">10:00 AM - 05:00 PM</p>
             </div>
           </div>
 
-         
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-    </main>
-    <!-- Footer -->
-    <footer class="bg-[#003A70] mt-10 text-white">
-  <div class="container">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-10 xl:gap-x-20 py-16">
-
-      <!-- About Section -->
-      <div class="sm:col-span-2 lg:col-span-1">
-        <img src="./assets/images/logo/SRDC Logo B 1 (PRIMARY LOGO).png" alt="Site Logo" class="w-40 md:w-48 lg:w-56 h-auto mb-4">
-
-        <p class="text-[15px] text-white/70">
-          Put your best smile forward with Smile Restore Dental Center. We offer complete dental care for kids and adults, with personalized treatments from our experienced team.
-        </p>
-
-        <!-- Social Media -->
-        <div class="mt-8">
-          <p class="text-[13px] font-medium text-white/70 mb-4">FOLLOW US ON</p>
-          <div class="flex gap-x-4">
-            <a href="#" class="bg-white/90 hover:bg-white text-[#003A70] p-2 rounded-lg transition-colors">
-              <i class="fa-brands fa-instagram text-lg"></i>
+          <!-- Social Links -->
+        <div class="mt-4">
+            <p class="text-sm font-medium text-slate-500 mb-3">Follow Us On</p>
+            <div class="flex gap-3">
+            <a href="#" class="icons-social" aria-label="Facebook" onclick="window.open('https://www.facebook.com/profile.php?id=61577803104117', '_blank'); return false;">
+               <i class="fa-brands fa-facebook-f text-lg"></i>
+           </a>
+             <a href="#" class="icons-social" aria-label="Instagram" onclick="window.open('https://www.instagram.com/smilerestoredental/', '_blank'); return false;">
+               <i class="fa-brands fa-instagram text-lg"></i>
             </a>
-            <a href="#" class="bg-white/90 hover:bg-white text-[#003A70] p-2 rounded-lg transition-colors">
-              <i class="fa-brands fa-linkedin-in text-lg"></i>
-            </a>
-            <a href="#" class="bg-white/90 hover:bg-white text-[#003A70] p-2 rounded-lg transition-colors">
-              <i class="fa-brands fa-facebook-f text-lg"></i>
-            </a>
+          
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Quick Links -->
-      <div>
-        <p class="text-[13px] font-medium text-white/70 mb-6">QUICK LINKS</p>
-        <ul class="flex flex-col gap-y-4 text-[15px]">
-          <li><a class="hover:underline" href="#">About Us</a></li>
-          <li><a class="hover:underline" href="#">Dental Services</a></li>
-          <li><a class="hover:underline" href="#">Location</a></li>
-          <li><a class="hover:underline" href="#">Blog</a></li>
-          <li><a class="hover:underline" href="#">FAQs</a></li>
-        </ul>
-      </div>
-
     </div>
-
+  </div>
+</section>
+    </main>
+    <!-- Footer -->
+<footer class="bg-[#003A70] mt-10 text-white">
+  <div class="container">
     <!-- Copyright -->
     <div class="text-center text-white/70 text-[13px] py-8 border-t border-white/20">
+       
       &copy; 2025 Smile Restore Dental Clinic. All Rights Reserved.
     </div>
   </div>

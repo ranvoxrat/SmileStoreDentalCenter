@@ -89,7 +89,7 @@
                 <nav class="hidden lg:block">
                     <ul class="flex gap-x-10 xl:gap-x-12 text-slate-800 text-sm font-bold child:transition-colors child:delay-75 child-hover:text-primary">
                         <li>
-                           <a href="#" onclick="window.location.href='index.html'; return false;">Home</a>
+                            <a href="#main">Home</a>
                         </li>
                         <li>
                             <a href="#">About Us</a>
@@ -100,18 +100,23 @@
                         <li>
                             <a href="#">Location & Contact Details</a>
                         </li>
-                        <li>
-                            <a class="flex items-center gap-x-1" href="#" onclick="window.open('faqs.html', '_blank')">
-                                <i class="fa-solid fa-circle-question"></i>
+                        <li>                          
+                          <a href="#" onclick="window.location.href='faqs.html'; return false;">
                                 FAQs
                             </a>
-
                         </li>
                     </ul>
                 </nav>
                 <!-- Header Button -->
                 <!-- <a class="hidden lg:block h-full w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800" href="#">Book an Appointment</a> -->
-                <button id="book-appointment-mobile" onclick="toggleModal(false)" class="hidden lg:block h-full w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800">Book an Appointment</button>
+                <button 
+                    id="book-appointment-mobile"
+                    onclick="toggleModal(false)"
+                    class="hidden lg:inline-flex items-center justify-center px-6 py-3 bg-primary text-white text-sm font-bold rounded-xl transition hover:bg-indigo-800"
+                    >
+                    Book an Appointment
+                    </button>
+
                 <!-- Mobile Menu -->
                 <div class="lg:hidden relative">
                     <!-- Mobile Menu Toggle Icon -->
@@ -151,34 +156,7 @@
                                 <!-- menu item -->
                                 <li>
                                     <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">
-                                            <use href="#gear"></use>
-                                        </svg>
-                                        Services
-                                    </a>
-                                </li>
-                                <!-- menu item -->
-                                <li>
-                                    <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">
-                                            <use href="#location"></use>
-                                        </svg>
-                                        Clinic Location
-                                    </a>
-                                </li>
-                                <!-- menu item -->
-                                <li>
-                                    <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">
-                                            <use href="#rss"></use>
-                                        </svg>
-                                        Blog
-                                    </a>
-                                </li>
-                                <!-- menu item -->
-                                <li>
-                                    <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">
+                                        <svg class="w-5 h-5">                                                                                     
                                             <use href="#users"></use>
                                         </svg>
                                         About Us
@@ -187,12 +165,33 @@
                                 <!-- menu item -->
                                 <li>
                                     <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">
-                                            <use href="#envelope"></use>
+                                        <svg class="w-5 h-5">   
+                                             <use href="#gear"></use>                                     
                                         </svg>
-                                        Contact Us
+                                       Services
                                     </a>
                                 </li>
+                                <!-- menu item -->
+                                <li>
+                                    <a class="flex items-center gap-x-1" href="#">
+                                        <svg class="w-5 h-5">
+                                             <use href="#location"></use>                                          
+                                        </svg>
+                                        Location & Contact Details
+                                    </a>
+                                </li>
+                                <!-- menu item -->
+                                <li>
+                                 
+                                  <a class="flex items-center gap-x-1" href="#" onclick="window.location.href='faqs.html'; return false;">
+                                        <i class="fa-solid fa-circle-question"></i>
+                                        FAQs
+                                    </a>
+
+
+                                </li>
+                                <!-- menu item -->
+                               
                             </ul>
                         </nav>
                         <!-- Button -->
@@ -207,7 +206,20 @@
     </header>
     <!-- Main -->
     <main id="main">
-   
+    <section class="mb-12 lg:mb-16 xl:mb-24">
+    <div class="container">
+        <div class="bg-top-main rounded-3xl flex flex-col  lg:flex-row overflow-hidden lg:min-h-[500px] xl:min-h-[620px] 2xl:min-h-[760px] ">
+
+        <!-- LEFT SIDE TEXT (50% width on desktop) -->
+        <div class="w-full lg:w-auto flex flex-col justify-center text-start lg:text-start p-8 lg:p-12">
+            <h1 class="curved-font">Your</h1>
+            <h1 class="curved-font1">BEST SMILE</h1>
+            <h1 class="curved-font2">Starts Here</h1>
+            <button onclick="toggleModal(false)" class="btn-modal"><i class="fa-solid fa-calendar-days"></i> Book an Appointment</button>
+        </div>
+        </div>
+    </div>
+    </section>
 
 
 <!-- Modal Wrapper -->
@@ -392,172 +404,196 @@
         </div>
     </div>
 </div>
+<section class="section py-16">
+  <div class="container">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-head text-center mb-6">Frequently Asked Questions</h1>
 
-<div class="max-w-2xl mx-auto p-4">
-  <h1 class="text-head mb-4">Frequently Asked Questions</h1>
+      <div class="space-y-4">
+        <!-- Accordion Item -->
+        <details class="group border border-gray-200 rounded-xl p-5 bg-white shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer text-base font-semibold text-slate-700">
+            Do you accept walk-ins or is an appointment required?
+            <span class="transition-transform duration-300 group-open:rotate-180">
+              <i class="fa-solid fa-chevron-down text-sm text-slate-500"></i>
+            </span>
+          </summary>
+          <p class="mt-3 text-sm text-gray-600">
+            We recommend scheduling an appointment to ensure availability, but we do our best to accommodate walk-ins and dental emergencies.
+          </p>
+        </details>
 
-  <div class="space-y-2">
-    <!-- Accordion Item -->
-    <details class="border rounded-lg p-3">
-      <summary class="cursor-pointer font-medium">Do you accept walk-ins or is an appointment required?</summary>
-      <p class="mt-2 text-gray-700">We recommend scheduling an appointment to ensure availability, but we do our best to accommodate walk-ins and dental emergencies.</p>
-    </details>
+        <details class="group border border-gray-200 rounded-xl p-5 bg-white shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer text-base font-semibold text-slate-700">
+            How can I book an appointment?
+            <span class="transition-transform duration-300 group-open:rotate-180">
+              <i class="fa-solid fa-chevron-down text-sm text-slate-500"></i>
+            </span>
+          </summary>
+          <p class="mt-3 text-sm text-gray-600">
+            You can call us, send a message on our social media pages, or
+            <a href="#" class="text-blue-600 font-semibold hover:underline">book online through our website</a>.
+          </p>
+        </details>
 
-    <details class="border rounded-lg p-3">
-      <summary class="cursor-pointer font-medium">How can I book an appointment?</summary>
-      <p class="mt-2 text-gray-700">
-        You can call us, send a message on our social media pages, or <a href="#" class="text-blue-600 font-semibold hover:underline">book online through our website</a>.
-      </p>
-    </details>
+        <details class="group border border-gray-200 rounded-xl p-5 bg-white shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer text-base font-semibold text-slate-700">
+            Is there parking available?
+            <span class="transition-transform duration-300 group-open:rotate-180">
+              <i class="fa-solid fa-chevron-down text-sm text-slate-500"></i>
+            </span>
+          </summary>
+          <p class="mt-3 text-sm text-gray-600">
+            There are parking spaces available in the building, but they are on a first-come, first-served basis.
+          </p>
+        </details>
 
-    <details class="border rounded-lg p-3">
-      <summary class="cursor-pointer font-medium">Is there parking available?</summary>
-      <p class="mt-2 text-gray-700">There are parking spaces available in the building, but they are on a first-come, first-served basis.</p>
-    </details>
+        <details class="group border border-gray-200 rounded-xl p-5 bg-white shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer text-base font-semibold text-slate-700">
+            What payment methods do you accept?
+            <span class="transition-transform duration-300 group-open:rotate-180">
+              <i class="fa-solid fa-chevron-down text-sm text-slate-500"></i>
+            </span>
+          </summary>
+          <p class="mt-3 text-sm text-gray-600">
+            We accept cash and selected e-wallets. We also offer payment plans for treatments that require multiple visits such as braces, dentures, and root canals. Just ask your dentist during your consultation.
+          </p>
+        </details>
 
-    <details class="border rounded-lg p-3">
-      <summary class="cursor-pointer font-medium">What payment methods do you accept?</summary>
-      <p class="mt-2 text-gray-700">
-        We accept cash and selected e-wallets. We also offer payment plans for treatments that require multiple visits such as braces, dentures, and root canals. Just ask your dentist during your consultation.
-      </p>
-    </details>
+        <details class="group border border-gray-200 rounded-xl p-5 bg-white shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer text-base font-semibold text-slate-700">
+            How much do treatments cost?
+            <span class="transition-transform duration-300 group-open:rotate-180">
+              <i class="fa-solid fa-chevron-down text-sm text-slate-500"></i>
+            </span>
+          </summary>
+          <p class="mt-3 text-sm text-gray-600">
+            Treatment costs vary depending on the procedure. We’ll provide a detailed estimate after your consultation, and we're happy to discuss affordable options.
+          </p>
+        </details>
 
-    <details class="border rounded-lg p-3">
-      <summary class="cursor-pointer font-medium">How much do treatments cost?</summary>
-      <p class="mt-2 text-gray-700">
-        Treatment costs vary depending on the procedure. We’ll provide a detailed estimate after your consultation, and we're happy to discuss affordable options.
-      </p>
-    </details>
-
-    <details class="border rounded-lg p-3">
-      <summary class="cursor-pointer font-medium">Will it hurt?</summary>
-      <p class="mt-2 text-gray-700">We offer local anesthesia to keep you comfortable during the procedure.</p>
-    </details>
+        <details class="group border border-gray-200 rounded-xl p-5 bg-white shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer text-base font-semibold text-slate-700">
+            Will it hurt?
+            <span class="transition-transform duration-300 group-open:rotate-180">
+              <i class="fa-solid fa-chevron-down text-sm text-slate-500"></i>
+            </span>
+          </summary>
+          <p class="mt-3 text-sm text-gray-600">
+            We offer local anesthesia to keep you comfortable during the procedure.
+          </p>
+        </details>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 
+        
+         <!-- Contact Us Section -->
+<section class="section py-16">
+  <div class="container">
+    <div class="flex flex-col lg:flex-row gap-y-10 gap-x-20">
+      
+      <!-- Map image with address -->
+      <div class="relative lg:w-1/2">
+        <img 
+          src="./assets/images/map-image.webp" 
+          alt="Map showing clinic location" 
+          class="w-full h-[440px] xs:h-[500px] lg:h-[610px] xl:h-[680px] object-cover rounded-3xl"
+        >
+
+        <!-- Address Box -->
+        <div class="absolute bg-white p-5 bottom-8 left-8 right-8 rounded-3xl flex gap-4 items-start shadow-xl">
+          <div class="p-2 border border-primary rounded-full hover:bg-primary/10 transition">
+            <i class="fa-solid fa-location-dot text-primary text-lg" aria-hidden="true"></i>
+          </div>
+          <div>
+            <p class="text-xs text-primary font-bold mb-1">Clinic Address</p>
+            <p class="font-bold text-slate-800 text-sm leading-relaxed max-w-[260px]">
+              Unit 205 A, No. 65 - 67 V. Luna Road corner Kalayaan Avenue, Barangay Pinyahan, Quezon City
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="lg:w-1/2">
+        <p class="text-head text-xl uppercase tracking-wide text-primary font-semibold">Location and Contact Details</p>
+
+        <div class="flex flex-col gap-8 mt-6 text-slate-800">
+          
+          <!-- Email -->
+          <div class="flex items-start gap-4">
+          <div class="icons">
+              <i class="fa-solid fa-envelope text" aria-hidden="true"></i>
+            </div>
+            <div>
+              <p class="text-sm text-slate-500 mb-1">Email</p>
+              <p class="font-semibold text-base">smilerestoredental@gmail.com</p>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="flex items-start gap-4">
+            <div class="icons">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            </div>
+            <div>
+              <p class="text-sm text-slate-500 mb-1">Phone Number</p>
+              <p class="font-semibold text-base">(0906) 575 4924</p>
+            </div>
+          </div>
+
+          <!-- Clinic Hours -->
+          <div class="flex items-start gap-4">
+            <div class="icons">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+            </div>
+            <div>
+              <p class="text-sm text-slate-500 mb-1">Clinic Hours</p>
+              <p class="font-semibold text-base">Monday - Saturday</p>
+              <p class="font-semibold text-base">10:00 AM - 05:00 PM</p>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="mt-4">
+            <p class="text-sm font-medium text-slate-500 mb-3">Follow Us On</p>
+            <div class="flex gap-3">
+              <a href="#" class="icons-social" aria-label="Instagram">
+                <i class="fa-brands fa-instagram text-lg"></i>
+              </a>
+
+              <a href="#" class="icons-social" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f text-lg"></i>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
        
 
-       
+  
+
     </main>
     <!-- Footer -->
-    <footer class="bg-[#003A70] mt-10">
-        <div class="container">  
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-10 xl:gap-x-20 text-white py-16">
-                <!-- About me in Footer -->
-                <div class="sm:col-span-2 lg:col-span-1">
-                    <!-- Logo -->
-                     <!-- <h1>Logo</h1> -->
-                     <img src="./assets/images/logo/SRDC Logo B 1 (PRIMARY LOGO).png" alt="Site-Logo" class="w-40 md:w-48 lg:w-56 h-auto">
-                    <!-- <img src="./assets/images/logo/logo.png" alt="Site-Logo" class="img-logo1"> -->
-                    <!-- <img src="./assets/images/logo-footer.svg" alt="logo-footer"> -->
-                    <!-- Description -->
-                    <p class="text-[15px] text-white/70  mt-4">Put your best smile forward with Smile Restore Dental Center. We offer complete dental care for kids and adults, with personalized treatments from our experienced team.</p>
-                    <!-- Social in footer -->
-                    <div class="mt-8">
-                        <p class="text-[13px] font-medium text-white/70 mb-4">FALLOW US ON</p>
-                        <!-- Socials -->
-                        <div class="flex items-center gap-x-4 child:transition-colors child:bg-white/90 child-hover:bg-white child:p-2 child:rounded-lg">
-                            <!-- Social item -->
-                            <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1e293b" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
-                            </a>
-                            <!-- Social item -->
-                            <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1e293b" d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z"/></svg>
-                            </a>
-                             <!-- Social item -->
-                             <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1e293b" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Quick Access in Footer -->
-                <div>
-                    <!-- Title -->
-                    <p class="text-[13px] font-medium text-white/70 mb-6">QUICK LINKS</p>
-                    <!-- Quick Access List -->
-                    <ul class="flex flex-col gap-y-4 text-[15px]">
-                        <!-- Quick Access item -->
-                        <li>
-                            <a class="quick-access-item" href="#">About Us</a>
-                        </li>
-                        <!-- Quick Access item -->
-                        <li>
-                            <a class="quick-access-item" href="#">Dental Services</a>
-                        </li>
-                        <!-- Quick Access item -->
-                        <li>
-                            <a class="quick-access-item" href="#">Location</a>
-                        </li>
-                        <!-- Quick Access item -->
-                        <li>
-                            <a class="quick-access-item" href="#">Blog</a>
-                        </li>
-                        <!-- Quick Access item -->
-                        <li>
-                            <a class="quick-access-item" href="#">FAQs</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Contact us in Footer -->
-                <div>
-                    <!-- Title -->
-                    <p class="text-[13px] font-medium text-white/70">CONTACT & INFORMATION</p>
-                    <!-- Contact info List -->
-                    <div class="flex flex-col gap-y-4 mt-6">
-                          <!-- Contact info item -->
-                        <div class="flex items-center gap-x-4">
-                            <!-- info icon -->
-                            <img class="h-14 w-14" src="./assets/images/email-white-icon.png" alt="phone-icon">
-                            <!-- info contents -->
-                            <div>
-                                <p class="text-[14px] font-medium text-white/70 mb-1">Email</p>
-                                <p class="font-bold">smilerestoredental@gmail.com</p>
-                            </div>
-                        </div>
-                        <!-- Contact info item -->
-                        <div class="flex items-center gap-x-4">
-                            <!-- info icon -->
-                            <img class="h-14 w-14" src="./assets/images/phone-white-icon.png" alt="phone-icon">
-                            <!-- info contents -->
-                            <div>
-                                <p class="text-[14px] font-medium text-white/70 mb-1">Phone Number</p>
-                                <p class="font-bold">(0906) 575 4924</p>
-                            </div>
-                        </div>
-                        <!-- Contact info item -->
-                        <div class="flex items-center gap-x-4">
-                            <!-- info icon -->
-                            <img class="h-14 w-14" src="./assets/images/clock-icon.png" alt="clock-icon">
-                            <!-- info contents -->
-                            <div>
-                                <p class="text-[14px] font-medium text-white/70 mb-1">Open Hours</p>
-                                <p class="font-bold">10:00 AM - 05:00 PM</p>
-                            </div>
-                        </div>
-                        <!-- Contact info item -->
-                        <div class="flex items-center gap-x-4">
-                            <!-- info icon -->
-                            <img class="h-14 w-14" src="./assets/images/location-icon.png" alt="location-icon">
-                            <!-- info contents -->
-                            <div>
-                                <p class="text-[14px] font-medium text-white/70 mb-1">Clinic Address</p>
-                                <p class="font-bold">Unit 205 A, No. 65 - 67 V. Luna Road corner Kalayaan  Avenue, Barangay Pinyahan, Quezon City</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             <!-- Copyright Section -->
-        <div class="text-center text-white/70 text-[13px] py-8">
-            &copy; 2025 Smile Restore Dental Clinic. All Rights Reserved.
-        </div>
-        </div>
-    </footer>
+<footer class="bg-[#003A70] mt-10 text-white">
+  <div class="container">
+    <!-- Copyright -->
+    <div class="text-center text-white/70 text-[13px] py-8 border-t border-white/20">
+       
+      &copy; 2025 Smile Restore Dental Clinic. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./scripts/formValidator.js"></script>

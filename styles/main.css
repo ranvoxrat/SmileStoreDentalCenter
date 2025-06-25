@@ -1720,6 +1720,58 @@ body{
 .bg-primary {
     background-color: #5B21B6; /* example color */
 }
+.icons {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid rgb(3, 63, 133);
+  padding: 1.4rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.icons > i {
+  font-size: 1.5rem;
+  color: rgb(3, 63, 133);
+  transition: color 0.3s ease;
+}
+
+.icons:hover {
+  background-color:rgb(3, 63, 133); 
+}
+
+.icons:hover > i {
+  color: #ffffff; 
+}
+.icons-social {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+ 
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.icons-social i {
+  font-size: 1.25rem; /* roughly Tailwind's text-lg */
+  color: blue;
+  transition: color 0.3s ease;
+}
+
+.icons-social:hover {
+  background-color: rgba(0, 0, 255, 0.1); /* light blue hover bg */
+}
+
+.icons-social:hover i {
+  color: #003A70; /* darker blue on hover */
+}
 
 @media (min-width: 480px) {
   .xs\:h-\[500px\] {
