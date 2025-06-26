@@ -1747,6 +1747,53 @@ body{
   color: rgb(255, 255, 255);
   transition: color 0.3s ease;
 }
+.icons-about1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  color: #ffffff;
+  border: none;
+  background-image: linear-gradient(45deg, #0f9b0f, #00ff95); /* Green gradient */
+  padding: 1.4rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.icons-about2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  color: #ffffff;
+  border: none;
+  background-image: linear-gradient(45deg, #1e3c72, #2a5298); /* Blue gradient */
+  padding: 1.4rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.icons-about3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  color: #ffffff;
+  border: none;
+  background-image: linear-gradient(45deg, #ff416c, #ff4b2b); /* Red gradient */
+  padding: 1.4rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
 
 .icons-social {
   display: inline-flex;
