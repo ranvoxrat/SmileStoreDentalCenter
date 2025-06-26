@@ -144,58 +144,60 @@
                             </button>
                         </div>
                         <!-- Mobile menu nav -->
-                        <nav class="p-4 grow">
-                            <!-- menu List -->
-                            <ul class="flex flex-col gap-y-5 text-slate-800 text-sm font-medium child:transition-colors child:delay-75 child-hover:text-primary">
-                                <!-- menu item -->
-                                <li>
-                                    <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">
-                                            <use href="#home"></use>
-                                        </svg>
-                                        Home
-                                    </a>
-                                </li>
-                                <!-- menu item -->
-                                <li>
-                                    <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">                                                                                     
-                                            <use href="#users"></use>
-                                        </svg>
-                                        About Us
-                                    </a>
-                                </li>
-                                <!-- menu item -->
-                                <li>
-                                    <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">   
-                                             <use href="#gear"></use>                                     
-                                        </svg>
-                                       Services
-                                    </a>
-                                </li>
-                                <!-- menu item -->
-                                <li>
-                                    <a class="flex items-center gap-x-1" href="#contactUs">
-                                        <!-- <svg class="w-5 h-5">
-                                             <use href="#location"></use>                                          
-                                        </svg> -->
-                                        Location & Contact Details
-                                    </a>
-                                </li>
-                                <!-- menu item -->
-                                <li>
-                                 
-                                  <a class="flex items-center gap-x-1" href="#" onclick="window.location.href='faqs.html'; return false;">
-                                        <i class="fa-solid fa-circle-question"></i>
-                                        FAQs
-                                    </a>
+                         <nav class="p-4 grow">
+                        <ul class="flex flex-col gap-y-5 text-slate-800 text-sm font-medium child:transition-colors child:delay-75 child-hover:text-primary">
+                            
+                            <!-- Home -->
+                            <li>
+                            <a href="#" onclick="window.location.href='index.html'; return false;" class="flex items-center gap-x-3">
+                                <span class="w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 text-primary bg-white">
+                                <i class="fa-solid fa-house text-sm"></i>
+                                </span>
+                                Home
+                            </a>
+                            </li>
 
+                            <!-- About Us -->
+                            <li>
+                            <a href="#" onclick="document.getElementById('aboutUs').scrollIntoView({ behavior: 'smooth' }); return false;" class="flex items-center gap-x-3">
+                                <span class="w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 text-primary bg-white">
+                                <i class="fa-solid fa-users text-sm"></i>
+                                </span>
+                                About Us
+                            </a>
+                            </li>
 
-                                </li>
-                                <!-- menu item -->
-                               
-                            </ul>
+                            <!-- Services -->
+                            <li>
+                            <a href="#" onclick="document.getElementById('service').scrollIntoView({ behavior: 'smooth' }); return false;" class="flex items-center gap-x-3">
+                                <span class="w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 text-primary bg-white">
+                                <i class="fa-solid fa-tooth text-sm"></i>
+                                </span>
+                                Services
+                            </a>
+                            </li>
+
+                            <!-- Location & Contact -->
+                            <li>
+                            <a href="#" onclick="document.getElementById('contactUs').scrollIntoView({ behavior: 'smooth' }); return false;" class="flex items-center gap-x-3">
+                                <span class="w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 text-primary bg-white">
+                                <i class="fa-solid fa-map-marker-alt text-sm"></i>
+                                </span>
+                                Location & Contact
+                            </a>
+                            </li>
+
+                            <!-- FAQs -->
+                            <li>
+                            <a href="#" onclick="window.location.href='faqs.html'; return false;" class="flex items-center gap-x-3">
+                                <span class="w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 text-primary bg-white">
+                                <i class="fa-solid fa-circle-question text-sm"></i>
+                                </span>
+                                FAQs
+                            </a>
+                            </li>
+
+                        </ul>
                         </nav>
                         <!-- Button -->
                         <div class="p-4">
@@ -435,7 +437,7 @@
           </summary>
           <p class="mt-3 text-sm text-gray-600">
             You can call us, send a message on our social media pages, or
-            <a href="#" class="text-blue-600 font-semibold hover:underline">book online through our website</a>.
+            <a href="#" onclick="toggleModal(false)" class="text-blue-600 font-semibold hover:underline">book online through our website</a>.
           </p>
         </details>
 
@@ -508,9 +510,6 @@
 
         <!-- Address Box -->
         <div class="absolute bg-white p-5 bottom-8 left-8 right-8 rounded-3xl flex gap-4 items-start shadow-xl">
-          <div class="p-2 border border-primary rounded-full hover:bg-primary/10 transition">
-            <i class="fa-solid fa-location-dot text-primary text-lg" aria-hidden="true"></i>
-          </div>
           <div>
             <p class="text-head text-xl uppercase tracking-wide font-semibold mb-1">Clinic Address</p>
             <p class="font-bold text-slate-800 text-sm leading-relaxed max-w-[260px]">

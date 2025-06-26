@@ -145,49 +145,61 @@
                         </div>
                         <!-- Mobile menu nav -->
                         <nav class="p-4 grow">
-                            <!-- menu List -->
-                         <ul class="flex flex-col gap-y-5 text-slate-800 text-sm font-medium child:transition-colors child:delay-75 child-hover:text-primary">
+                        <ul class="flex flex-col gap-y-5 text-slate-800 text-sm font-medium child:transition-colors child:delay-75 child-hover:text-primary">
+                            
                             <!-- Home -->
                             <li>
-                                <a class="flex items-center gap-x-2" href="#" onclick="document.getElementById('home').scrollIntoView({ behavior: 'smooth' }); return false;">
-                                <i class="fa-solid fa-house w-5 h-5"></i>
+                            <a href="#" onclick="document.getElementById('home').scrollIntoView({ behavior: 'smooth' }); return false;" class="flex items-center gap-x-3">
+                                <span class="w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 text-primary bg-white">
+                                <i class="fa-solid fa-house text-sm"></i>
+                                </span>
                                 Home
-                                </a>
+                            </a>
                             </li>
 
                             <!-- About Us -->
                             <li>
-                                <a class="flex items-center gap-x-2" href="#" onclick="document.getElementById('aboutUs').scrollIntoView({ behavior: 'smooth' }); return false;">
-                                <i class="fa-solid fa-users w-5 h-5"></i>
+                            <a href="#" onclick="document.getElementById('aboutUs').scrollIntoView({ behavior: 'smooth' }); return false;" class="flex items-center gap-x-3">
+                                <span class="w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 text-primary bg-white">
+                                <i class="fa-solid fa-users text-sm"></i>
+                                </span>
                                 About Us
-                                </a>
+                            </a>
                             </li>
 
                             <!-- Services -->
                             <li>
-                                <a class="flex items-center gap-x-2" href="#" onclick="document.getElementById('service').scrollIntoView({ behavior: 'smooth' }); return false;">
-                                <i class="fa-solid fa-gear w-5 h-5"></i>
+                            <a href="#" onclick="document.getElementById('service').scrollIntoView({ behavior: 'smooth' }); return false;" class="flex items-center gap-x-3">
+                                <span class="w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 text-primary bg-white">
+                                <i class="fa-solid fa-tooth text-sm"></i>
+                                </span>
                                 Services
-                                </a>
+                            </a>
                             </li>
 
-                            <!-- Contact -->
+                            <!-- Location & Contact -->
                             <li>
-                                <a class="flex items-center gap-x-2" href="#" onclick="document.getElementById('contactUs').scrollIntoView({ behavior: 'smooth' }); return false;">
-                                <i class="fa-solid fa-location-dot w-5 h-5"></i>
-                                Location & Contact Details
-                                </a>
+                            <a href="#" onclick="document.getElementById('contactUs').scrollIntoView({ behavior: 'smooth' }); return false;" class="flex items-center gap-x-3">
+                                <span class="w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 text-primary bg-white">
+                                <i class="fa-solid fa-map-marker-alt text-sm"></i>
+                                </span>
+                                Location & Contact
+                            </a>
                             </li>
 
                             <!-- FAQs -->
                             <li>
-                                <a class="flex items-center gap-x-2" href="#" onclick="window.location.href='faqs.html'; return false;">
-                                <i class="fa-solid fa-circle-question w-5 h-5"></i>
+                            <a href="#" onclick="window.location.href='faqs.html'; return false;" class="flex items-center gap-x-3">
+                                <span class="w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 text-primary bg-white">
+                                <i class="fa-solid fa-circle-question text-sm"></i>
+                                </span>
                                 FAQs
-                                </a>
+                            </a>
                             </li>
-                            </ul>
+
+                        </ul>
                         </nav>
+
                         <!-- Button -->
                         <div class="p-4">
                             <!-- <a class="block w-full h-12 leading-[2.8rem] bg-primary text-white text-sm font-bold text-center rounded-xl transition-colors hover:bg-indigo-800" href="#">Book an appointment</a> -->
