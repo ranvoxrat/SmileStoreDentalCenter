@@ -354,6 +354,29 @@
                         </div>
                     </div>
                 </div>
+               <!-- Dental Services -->
+<div>
+    <label for="dental-service" class="block text-sm font-medium text-gray-700">Select Service</label>
+    <div class="relative">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+            <i class="fa fa-tooth"></i>
+        </span>
+        <select id="dental-service" name="dental-service" required
+            class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary">
+            <option value="" disabled selected>Select a service</option>
+            <option value="1">Adjustment</option>
+            <option value="2">Consult</option>
+            <option value="3">Dentures/Veneers/Bridge</option>
+            <option value="4">Extraction (Bunot)</option>
+            <option value="5">New Ortho/Braces</option>
+            <option value="6">Oral Prophylaxis (Cleaning)</option>
+            <option value="7">RB/Wire</option>
+            <option value="8">Resto (Pasta)</option>
+            <option value="9">Surgery</option>
+            <option value="10">Whitening</option>
+        </select>
+    </div>
+</div>
 
                 <!-- New Patient & Referral -->
                 <div class="space-y-2">
@@ -405,49 +428,55 @@
       <!-- About Us info -->
       <div class="flex flex-col gap-y-2">
         <h1 class="text-head text-xl uppercase tracking-wide font-semibold">ABOUT US</h1>
-        <!-- <h2 class="text-slate-800 text-4xl leading-snug font-bold">Who We Are</h2> -->
         <p class="text-sub">
           Our mission is simple — to create a comfortable space where you can achieve a healthier, more confident smile.
         </p>
       </div>
 
       <!-- Features -->
-      <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-5 child:transition-all child-hover:shadow-2xl child-hover:shadow-slate-400/20 child-hover:border-gray-100 child:cursor-pointer">
+     <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-8 child:transition-all child-hover:shadow-2xl child-hover:shadow-slate-400/20 child-hover:border-gray-100 child:cursor-pointer">
 
-        <!-- Feature 1 -->
-        <div class="rounded-[32px] border p-6 flex flex-col gap-y-4">
-          <img src="./assets/images/website-img/Green Check.png" alt="Check Icon" class="w-12 h-12 mx-auto object-contain">
-          <div class="text-center space-y-2">
-            <h3 class="text-head text-xl uppercase tracking-wide font-semibold">Clean & Protected</h3>
-            <p class="text-sub">
-              Every instrument is thoroughly sterilized, and our clinic is disinfected regularly to ensure a safe and clean environment for you.
-            </p>
-          </div>
-        </div>
+  <!-- Feature 1: Clean & Protected -->
+  <div class="rounded-[32px] border p-6 flex flex-col gap-y-4">
+    <div class="w-12 h-12 mx-auto flex items-center justify-center text-green-600 text-3xl">
+      <i class="fas fa-shield-alt"></i>
+    </div>
+    <div class="text-center space-y-2">
+      <h3 class="text-head text-xl uppercase tracking-wide font-semibold">Clean & Protected</h3>
+      <p class="text-sub">
+        Every instrument is thoroughly sterilized, and our clinic is disinfected regularly to ensure a safe and clean environment for you.
+      </p>
+    </div>
+  </div>
 
-        <!-- Feature 2 -->
-        <div class="rounded-[32px] border p-6 flex flex-col gap-y-4">
-          <img src="./assets/images/website-img/Green Check.png" alt="Check Icon" class="w-12 h-12 mx-auto object-contain">
-          <div class="text-center space-y-2">
-            <h3 class="text-head text-xl uppercase tracking-wide font-semibold">Professional & Compassionate Team</h3>
-            <p class="text-sub">
-              Our team combines skill and compassion to ensure that you receive the service that you deserve.
-            </p>
-          </div>
-        </div>
+  <!-- Feature 2: Professional & Compassionate Team -->
+  <div class="rounded-[32px] border p-6 flex flex-col gap-y-4">
+    <div class="w-12 h-12 mx-auto flex items-center justify-center text-blue-600 text-3xl">
+      <i class="fas fa-user-md"></i>
+    </div>
+    <div class="text-center space-y-2">
+      <h3 class="text-head text-xl uppercase tracking-wide font-semibold">Professional & Compassionate Team</h3>
+      <p class="text-sub">
+        Our team combines skill and compassion to ensure that you receive the service that you deserve.
+      </p>
+    </div>
+  </div>
 
-        <!-- Feature 3 -->
-        <div class="rounded-[32px] border p-6 flex flex-col gap-y-4">
-          <img src="./assets/images/website-img/Green Check.png" alt="Check Icon" class="w-12 h-12 mx-auto object-contain">
-          <div class="text-center space-y-2">
-            <h3 class="text-head text-xl uppercase tracking-wide font-semibold">Patient-Focused Care</h3>
-            <p class="text-sub">
-              Your comfort, concerns, and dental goals are always our top priorities.
-            </p>
-          </div>
-        </div>
+  <!-- Feature 3: Patient-Focused Care -->
+  <div class="rounded-[32px] border p-6 flex flex-col gap-y-4">
+    <div class="w-12 h-12 mx-auto flex items-center justify-center text-pink-600 text-3xl">
+      <i class="fas fa-hand-holding-heart"></i>
+    </div>
+    <div class="text-center space-y-2">
+      <h3 class="text-head text-xl uppercase tracking-wide font-semibold">Patient-Focused Care</h3>
+      <p class="text-sub">
+        Your comfort, concerns, and dental goals are always our top priorities.
+      </p>
+    </div>
+  </div>
 
-      </div>
+</div>
+
 
     </div>
   </div>
@@ -458,9 +487,11 @@
             <div class="container">
                 <div class="flex flex-col gap-14 lg:gap-y-16 xl:gap-y-20 text-center">
                     <!-- Services info contents -->
-                   <h1 class="text-head text-xl uppercase tracking-wide font-semibold">OUR SERVICES</h1>
+                 <div  class="flex flex-col gap-y-2">  
+                    <h1 class="text-head text-xl uppercase tracking-wide font-semibold">OUR SERVICES</h1>
+                   <p class="text-sub text-base text-gray-600">Discover a wide range of dental services designed to meet your needs—from routine cleanings to advanced cosmetic procedures. We're here to help you smile with confidence.</p></div>
                     <!-- Services -->
-                    <div id="services-list" class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-5 child:transition-all child-hover:shadow-2xl lg:mt-0 child-hover:shadow-slate-400/20 child-hover:border-gray-100 child:cursor-pointer">
+                    <div id="services-list" class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-8 child:transition-all child-hover:shadow-2xl lg:mt-0 child-hover:shadow-slate-400/20 child-hover:border-gray-100 child:cursor-pointer">
                         <!-- Service item 1 -->
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4">
                             <img class="w-full rounded-[32px]" src="./assets/images/website-img/General Dentistry.png" alt="">
@@ -550,26 +581,24 @@
     <div class="flex flex-col lg:flex-row gap-y-10 gap-x-20">
       
       <!-- Map image with address -->
-      <div class="relative lg:w-1/2">
-        <img 
-          src="./assets/images/map-image.webp" 
-          alt="Map showing clinic location" 
-          class="w-full h-[440px] xs:h-[500px] lg:h-[610px] xl:h-[680px] object-cover rounded-3xl"
-        >
+       <div class="relative lg:w-[800px]">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d241.27159199936918!2d121.054160138695!3d14.636320323781964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sph!4v1750900786874!5m2!1sen!2sph"
+          width="800" height="450" style="border:0;" allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-        <!-- Address Box -->
-        <div class="absolute bg-white p-5 bottom-8 left-8 right-8 rounded-3xl flex gap-4 items-start shadow-xl">
-          <div class="icons hover:bg-primary/10 transition">
-            <i class="fa-solid fa-location-dot text-primary text-lg" aria-hidden="true"></i>
-          </div>
-          <div>
-            <p class="text-head text-xl uppercase tracking-wide font-semibold mb-1">Clinic Address</p>
-            <p class="font-bold text-slate-800 text-sm leading-relaxed max-w-[260px]">
-              Unit 205 A, No. 65 - 67 V. Luna Road corner Kalayaan Avenue, Barangay Pinyahan, Quezon City
-            </p>
-          </div>
-        </div>
-      </div>
+  <!-- Top-right badge -->
+  <div class="absolute bg-white p-5 top-8 right-8 rounded-3xl flex gap-4 items-start shadow-xl">
+    <div>
+      <p class="text-head text-xl uppercase tracking-wide font-semibold mb-1">Clinic Address</p>
+      <p class="font-bold text-slate-800 text-sm leading-relaxed max-w-[260px]">
+        Unit 205 A, No. 65 – 67 V. Luna Rd&nbsp;corner&nbsp;Kalayaan Ave,<br>
+        Brgy. Pinyahan, Quezon City
+      </p>
+    </div>
+  </div>
+</div>
+
+
 
       <!-- Contact Details -->
       <div class="lg:w-1/2">

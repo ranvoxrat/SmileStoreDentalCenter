@@ -1528,7 +1528,7 @@ body{
   font-family: "Poppins",sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #161616;
+  color: #003A70;
 }
 .text-sub{
   font-family: "Poppins",sans-serif;
@@ -1729,8 +1729,8 @@ body{
   height: 20px;
   border-radius: 4px;
   color: #ffffff; 
-  border: 2px solid rgb(3, 63, 133);
-  background-color:rgb(3, 63, 133); 
+  border: none;
+  background-image: linear-gradient(45deg, rgb(9, 58, 175),rgb(89, 13, 176)); 
   padding: 1.4rem;
   transition: all 0.3s ease;
   cursor: pointer;
