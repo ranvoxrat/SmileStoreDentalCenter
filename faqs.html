@@ -501,23 +501,22 @@
     <div class="flex flex-col lg:flex-row gap-y-10 gap-x-20">
       
       <!-- Map image with address -->
-      <div class="relative lg:w-1/2">
-        <img 
-          src="./assets/images/map-image.webp" 
-          alt="Map showing clinic location" 
-          class="w-full h-[440px] xs:h-[500px] lg:h-[610px] xl:h-[680px] object-cover rounded-3xl"
-        >
+      <div class="relative lg:w-[800px]">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d241.27159199936918!2d121.054160138695!3d14.636320323781964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sph!4v1750900786874!5m2!1sen!2sph"
+          width="100%" height="450" style="border:0;" allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-        <!-- Address Box -->
-        <div class="absolute bg-white p-5 bottom-8 left-8 right-8 rounded-3xl flex gap-4 items-start shadow-xl">
-          <div>
-            <p class="text-head text-xl uppercase tracking-wide font-semibold mb-1">Clinic Address</p>
-            <p class="font-bold text-slate-800 text-sm leading-relaxed max-w-[260px]">
-              Unit 205 A, No. 65 - 67 V. Luna Road corner Kalayaan Avenue, Barangay Pinyahan, Quezon City
-            </p>
-          </div>
-        </div>
-      </div>
+  <!-- Top-right badge -->
+  <div class="absolute bg-white p-5 top-8 right-8 rounded-3xl flex gap-4 items-start shadow-xl">
+    <div>
+      <p class="text-head text-xl uppercase tracking-wide font-semibold mb-1">Clinic Address</p>
+      <p class="font-bold text-slate-800 text-sm leading-relaxed max-w-[260px]">
+        Unit 205 A, No. 65 – 67 V. Luna Rd&nbsp;corner&nbsp;Kalayaan Ave,<br>
+        Brgy. Pinyahan, Quezon City
+      </p>
+    </div>
+  </div>
+</div>
 
       <!-- Contact Details -->
       <div class="lg:w-1/2">
