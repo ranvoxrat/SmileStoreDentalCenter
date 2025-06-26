@@ -200,7 +200,7 @@
     </header>
     <!-- Main -->
     <main >
-    <section class="mb-12 lg:mb-16 xl:mb-24" id="home" name="home">
+    <section class=" lg:mb-16 xl:mb-24" id="home" name="home">
     <div class="container">
         <div class="bg-top-main rounded-3xl flex flex-col  lg:flex-row overflow-hidden lg:min-h-[500px] xl:min-h-[620px] 2xl:min-h-[760px] ">
 
@@ -421,7 +421,7 @@
     </div>
 </div>
 <!-- About Us Section -->
-<section class="section mb-32" id="aboutUs">
+<section class="section py-16" id="aboutUs">
   <div class="container">
     <div class="flex flex-col gap-14 lg:gap-y-16 xl:gap-y-20 text-center">
 
@@ -437,7 +437,7 @@
      <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-8 child:transition-all child-hover:shadow-2xl child-hover:shadow-slate-400/20 child-hover:border-gray-100 child:cursor-pointer">
 
   <!-- Feature 1: Clean & Protected -->
-  <div class="rounded-[32px] border p-6 flex flex-col gap-y-4">
+  <div class="rounded-[4px] border p-6 flex flex-col gap-y-4">
     <div class="w-12 h-12 mx-auto flex items-center justify-center text-green-600 text-3xl">
       <i class="fas fa-shield-alt"></i>
     </div>
@@ -450,7 +450,7 @@
   </div>
 
   <!-- Feature 2: Professional & Compassionate Team -->
-  <div class="rounded-[32px] border p-6 flex flex-col gap-y-4">
+  <div class="rounded-[4px] border p-6 flex flex-col gap-y-4">
     <div class="w-12 h-12 mx-auto flex items-center justify-center text-blue-600 text-3xl">
       <i class="fas fa-user-md"></i>
     </div>
@@ -463,7 +463,7 @@
   </div>
 
   <!-- Feature 3: Patient-Focused Care -->
-  <div class="rounded-[32px] border p-6 flex flex-col gap-y-4">
+  <div class="rounded-[4px] border p-6 flex flex-col gap-y-4">
     <div class="w-12 h-12 mx-auto flex items-center justify-center text-pink-600 text-3xl">
       <i class="fas fa-hand-holding-heart"></i>
     </div>
@@ -570,11 +570,21 @@
                                 <use href="#arrow-right-circle"></use>
                             </svg>
                         </button>
-                          <button id="bookAppointmentBtn" onclick="toggleModal(false)" class="btn-modal hidden"><i class="fa-solid fa-calendar-days"></i> Book an Appointment</button>
+                      
                     </div>
                 </div>
             </div>
         </section>
+        <section class="section py-16 bg-blue-50" id="welcome">
+            <div class="container">
+                <div class="flex flex-col justify-center items-center gap-y-2 text-center">
+                <p class="text-xl uppercase tracking-wide font-semibold text-gray-400">Our doors are open</p>
+                <p class="text-head-welcome  uppercase tracking-wide font-bold mb-1"><i class="fa-solid fa-quote-left"></i> We're Ready to Welcome You <i class="fa-solid fa-quote-right"></i></p>
+               <button onclick="toggleModal(false)" class="btn-modal"><i class="fa-solid fa-calendar-days"></i> Book an Appointment</button>
+                </div>
+            </div>
+        </section>
+
          <!-- Contact Us Section -->
 <section class="section py-16" id="contactUs">
   <div class="container">
