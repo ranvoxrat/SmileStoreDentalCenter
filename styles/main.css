@@ -698,10 +698,16 @@ body{
   .container {
     max-width: 640px;
   }
-  btn-modal {
+  .btn-modal {
    width: 100%;       
    max-width: 300px;  
-   font-size: 15px;
+   font-size: 16px;
+}
+.text-head-welcome>.fa-solid{
+  font-size: 60px;
+}
+.text-head-welcome{
+  font-size: 30px;
 }
 }
 
@@ -1543,6 +1549,7 @@ body{
   font-weight: 700;
   color: #003A70;
 }
+
 .text-sub{
   font-family: "Poppins",sans-serif;
   font-size: 1rem;
