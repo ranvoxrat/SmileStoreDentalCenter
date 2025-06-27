@@ -467,7 +467,7 @@ html {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 18px;
-  line-height: 2rem;
+
   text-transform: uppercase;
   color: #fff;
 }
@@ -478,14 +478,15 @@ html {
   justify-content: center;
   background-image: linear-gradient(to right, blue, rgb(98, 0, 255));
   color: white;
-  width: 100%;       /* mobile default full width for better tap targets */
+  width: 80%;       /* mobile default full width for better tap targets */
   max-width: 300px;  /* optional for nice sizing on larger screens */
   margin-top: 2rem;
   padding: 0.75rem 1.5rem; /* better padding for button shape */
   gap: 0.5rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 .btn-modal:hover {
@@ -686,16 +687,22 @@ body{
   .curved-font2 {
     font-size: 50px;
     font-weight: 400;
+    margin-top:0;
+    padding: 4px;
+    /* line-height: 2.5rem; */
   }
-   .btn-modal {
-    width: auto; /* natural size on larger screens */
-  }
+  .
 }
 
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
   }
+  btn-modal {
+   width: 100%;       
+   max-width: 300px;  
+   font-size: 15px;
+}
 }
 
 @media (min-width: 768px) {
@@ -1576,7 +1583,7 @@ body{
 
 .text-primary {
   --tw-text-opacity: 1;
-  color: rgb(88 63 188 / var(--tw-text-opacity));
+  color: #003A70;
 }
 
 .text-slate-400 {
@@ -1709,7 +1716,7 @@ body{
 
 .child-hover\:text-primary > *:hover {
   --tw-text-opacity: 1;
-  color: rgb(88 63 188 / var(--tw-text-opacity));
+  color: #003A70;
 }
 
 .child-hover\:shadow-2xl > *:hover {
@@ -1736,7 +1743,7 @@ body{
   border-radius: 4px;
   color: #ffffff; 
   border: none;
-  background-image: linear-gradient(45deg, rgb(9, 58, 175),rgb(89, 13, 176)); 
+  background-image: linear-gradient(45deg, rgb(9, 58, 175),rgb(13, 24, 176)); 
   padding: 1.4rem;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -1747,56 +1754,24 @@ body{
   color: rgb(255, 255, 255);
   transition: color 0.3s ease;
 }
-.icons-about1 {
+.icons-about1,.icons-about2,.icons-about3 {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
-  border-radius: 4px;
-  color: #003A70;
+  border-radius: 50%;
+  color: #ffffff;
   border: none;
-  box-shadow: #003a7098 1px 2px 8px;
-  /* background-image: linear-gradient(45deg, #0f9b0f, #00ff95); Green gradient */
-  padding: 2rem;
+  /* box-shadow: #003a7098 1px 2px 8px; */
+  background-image: linear-gradient(145deg, #021152, #00aeff); 
+  padding: 2.5rem;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.icons-about2 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-   color: #003A70;
-  border: none;
-  box-shadow: #003a7098 1px 2px 8px;
-  /* background-image: linear-gradient(45deg, #1e3c72, #2a5298); Blue gradient */
-  padding: 2rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
 
-.icons-about3 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-   color: #003A70;
-  border: none;
-  box-shadow: #003a7098 1px 2px 8px;
-  /* background-image: linear-gradient(45deg, #ff416c, #ff4b2b); Red gradient */
-  padding: 2rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
 .icons-about1>i,.icons-about2>i,.icons-about3>i{
   font-size: 3rem;
 }
