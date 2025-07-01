@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="icon" href="./assets/images/logo/SRDC-Icon-3.png" type="images/png">
-    <script src="https://platform.tovie.ai/chatadapter/chatwidget/edWOUehI:791c45ca435c5ed140aa1fd740e833d809863286/justwidget.js" async></script>
+    <!-- <script src="https://platform.tovie.ai/chatadapter/chatwidget/edWOUehI:791c45ca435c5ed140aa1fd740e833d809863286/justwidget.js" async></script> -->
     <!-- Scripts -->
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./styles/main.css" type="text/css">
@@ -374,16 +374,15 @@
         <select id="dental-service" name="dental-service" required
             class="w-full pl-10 pr-3 py-2 rounded-md border border-gray-300 focus:ring-primary focus:border-primary">
             <option value="" disabled selected>Select a service</option>
-            <option value="1">Adjustment</option>
-            <option value="2">Consult</option>
-            <option value="3">Dentures/Veneers/Bridge</option>
-            <option value="4">Extraction (Bunot)</option>
-            <option value="5">New Ortho/Braces</option>
-            <option value="6">Oral Prophylaxis (Cleaning)</option>
-            <option value="7">RB/Wire</option>
-            <option value="8">Resto (Pasta)</option>
-            <option value="9">Surgery</option>
-            <option value="10">Whitening</option>
+            <option value="1">Braces Adjustment</option>
+            <option value="2">Braces Installation</option>
+            <option value="3">Consultation</option>
+            <option value="4">Dentures</option>
+            <option value="5">Oral Prophylaxis (Cleaning)</option>
+            <option value="6">Recementation of Bracket</option>
+            <option value="7">Restoration</option>
+            <option value="8">Root Canal Treatment</option>
+            <option value="9">Whitening</option>
         </select>
     </div>
 </div>
@@ -419,12 +418,12 @@
                 </div>
 
                 <!-- Submit Button -->
-                <div class="text-center pt-2">
-                    <button type="submit"
-                        class="btn-modal w-full">
-                        Submit
-                    </button>
-                </div>
+                <div class="pt-2 flex justify-center lg:justify-end">
+  <button type="submit" class="btn-modal w-full sm:w-auto">
+    <i class="fa-solid fa-check"></i> Submit
+  </button>
+</div>
+
 
             </form>
         </div>
@@ -438,8 +437,12 @@
       <!-- About Us info -->
       <div class="flex flex-col gap-y-2">
         <h1 class="text-head text-xl uppercase tracking-wide font-semibold">ABOUT US</h1>
-        <p class="text-sub">
-          Our mission is simple — to create a comfortable space where you can achieve a healthier, more confident smile.
+        <p class="text-sub text-base text-justify sm:text-justify indent-12">
+          Our mission is to improve the oral and overall wellness of our patients by delivering 
+        personalized dental treatments in a comfortable and welcoming environment. Through 
+        continuous education on dental advancements, we aim to provide our patients with the best 
+        possible care. At the heart of our practice is a commitment to making every patient feel valued, 
+        respected, and empowered to take control of their oral health.  
         </p>
       </div>
 
@@ -453,7 +456,7 @@
     </div>
     <div class="text-center space-y-2">
       <h3 class="text-head text-xl uppercase tracking-wide font-semibold">Clean & Protected</h3>
-      <p class="text-sub">
+      <p class="text-sub text-base text-justify sm:text-center">
         Every instrument is thoroughly sterilized, and our clinic is disinfected regularly to ensure a safe and clean environment for you.
       </p>
     </div>
@@ -466,7 +469,7 @@
     </div>
     <div class="text-center space-y-2">
       <h3 class="text-head text-xl uppercase tracking-wide font-semibold">Professional & Compassionate Team</h3>
-      <p class="text-sub">
+      <p class="text-sub text-base text-justify sm:text-center">
         Our team combines skill and compassion to ensure that you receive the service that you deserve.
       </p>
     </div>
@@ -479,7 +482,7 @@
     </div>
     <div class="text-center space-y-2">
       <h3 class="text-head text-xl uppercase tracking-wide font-semibold">Patient-Focused Care</h3>
-      <p class="text-sub">
+      <p class="text-sub text-base text-justify sm:text-center">
         Your comfort, concerns, and dental goals are always our top priorities.
       </p>
     </div>
@@ -499,7 +502,7 @@
                     <!-- Services info contents -->
                  <div  class="flex flex-col gap-y-2">  
                     <h1 class="text-head text-xl uppercase tracking-wide font-semibold">OUR SERVICES</h1>
-                   <p class="text-sub text-base text-gray-600">Discover a wide range of dental services designed to meet your needs—from routine cleanings to advanced cosmetic procedures. We're here to help you smile with confidence.</p></div>
+                   <p class="text-sub text-base text-gray-600">Discover a wide range of dental services designed to meet your needs—from routine cleanings to advanced treatments. We're here to help you smile with confidence.</p></div>
                     <!-- Services -->
                     <div id="services-list" class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-8 child:transition-all child-hover:shadow-2xl lg:mt-0 child-hover:shadow-slate-400/20 child-hover:border-gray-100 child:cursor-pointer">
                         <!-- Service item 1 -->
@@ -567,7 +570,7 @@
                             <img class="w-full rounded-[32px]" src="./assets/images/website-img/Dental X-Ray.png" alt="">
                             <div class="text-center space-y-2">
                                 <h3 class="text-head text-xl uppercase tracking-wide font-semibold">X-RAYS</h3>
-                                <p class="text-sub"> Periapical and Panoramic x-rays are available here</p>
+                                <p class="text-sub"> Periapical and Panoramic x-rays are available here.</p>
                             </div>
                         </div>
                     </div>
@@ -588,8 +591,8 @@
         <section class="section py-16 bg-blue-50" id="welcome">
             <div class="container">
                 <div class="flex flex-col justify-center items-center gap-y-2 text-center">
-                <p class="text-xl uppercase tracking-wide font-semibold text-gray-400">Our doors are open</p>
-                <p class="text-head-welcome  uppercase mb-1"><i class="fa-solid fa-quote-left"></i> We're Ready to Welcome You <i class="fa-solid fa-quote-right"></i></p>
+                <p class="text-head-welcome  uppercase ">Our doors are open</p>
+                <p class="text-xl tracking-wide font-semibold text-gray-400 mb-1">We're ready to welcome you!</p>
                <button onclick="toggleModal(false)" class="btn-modal"><i class="fa-solid fa-calendar-days"></i> Book an Appointment</button>
                 </div>
             </div>
@@ -615,7 +618,8 @@
             </div>
             <div>
               <p class="text-sm text-slate-500 mb-1">Address</p>
-              <p class="font-semibold text-base">  Unit 205 A, No. 65 – 67 V. Luna Rd&nbsp;corner&nbsp;Kalayaan Ave, Brgy. Pinyahan, Quezon City</p>
+               <p class="font-semibold text-base">Unit 205 A, Kalayaan Center, 65 V. Luna Road&nbsp;corner&nbsp;Kalayaan Avenue, Quezon City </p>
+              <!-- <p class="font-semibold text-base">  Unit 205 A, No. 65 – 67 V. Luna Rd&nbsp;corner&nbsp;Kalayaan Ave, Brgy. Pinyahan, Quezon City</p> -->
             </div>
           </div>
           <!-- Email -->
