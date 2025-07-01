@@ -2,17 +2,7 @@
 ## 📷 Screenshots
 ![Smile Restore Dental Center Desktop](https://ranvoxrat.github.io/SmileStoreDentalCenter/assets/images/screenshot.png)
 # Welcome to Smile Restore Dental Center
-Put your best smile forward with Smile Restore Dental Center. We offer complete dental care for kids and adults, with personalized treatments from our experienced team.
-
-# Development
-Smile Restore Dental Center is a fully responsive dental website, Responsive for all devices, build using HTML, CSS, Tailwindcss and JavaScript.
-
-## Need to enhance
-- Graphics images for content
-- Text content
-- About Smile Restore Dental Center
-- Mission and Vision
-
+Our mission is to improve the oral and overall wellness of our patients by delivering personalized dental treatments in a comfortable and welcoming environment. Through continuous education on dental advancements, we aim to provide our patients with the best possible care. At the heart of our practice is a commitment to making every patient feel valued, respected, and empowered to take control of their oral health.
 
 ## 🔗 Live Preview
 click the link to view live preview ➡
